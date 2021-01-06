@@ -8,6 +8,13 @@ body, html, *, p, b, ul, ol, h1, h2, a, button, main, footer{
   color:white!important;
 }
 
+.shrink30{
+  width:30%!important;
+}
+
+.shrink75{
+  width:75%!important;
+}
 
 
 @keyframes fadeIn {
@@ -72,6 +79,10 @@ body, html, *, p, b, ul, ol, h1, h2, a, button, main, footer{
 .black{
   background-color: black;
 
+}
+
+.black-font{
+  color:black;
 }
 
 .collapsible:hover {
@@ -367,7 +378,7 @@ main{
   color: #000000;
   font-weight: 400;
   margin-top: 0;
-  margin-bottom: 3em;
+
 }
 
 .light_grey{
@@ -399,8 +410,8 @@ main{
 
 .lil_dot{
   font-family: serif;
-  font-size: 8rem;
-  line-height: 20%;
+  font-size: 5rem;
+  line-height: 0%;
   background: none;
   padding-left: 0;
   margin-left: -.1em;
@@ -428,7 +439,7 @@ main{
 }
 
 .call_to_action_blue{
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #000000;
   position: relative;
   transition: 0.2s ease;
@@ -452,6 +463,7 @@ a:hover{
   color: #3b51a3;
   padding-top: .5em;
   font-weight: 800;
+  text-decoration: underline;
 
 }
 
@@ -559,7 +571,7 @@ a:hover{
 }
 
 p, ul, ol{
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 p, b{
@@ -597,7 +609,7 @@ p, b{
 }
 
 .right_push_pad{
-  padding-right: 14vw;
+  padding-right: 9vw;
 }
 
 .hide{
@@ -605,7 +617,32 @@ p, b{
 }
 
 .slight_push{
-  padding-left: 7vw;
+  padding-left: 8vw;
+}
+
+@media screen and (max-width: 818px) {
+  .logo{
+    width: 37%;
+  }
+
+  .current_page{
+    width: 21%!important;
+  }
+
+  .not_current_page{
+    width: 21%!important;
+  }
+
+}
+
+
+@media screen and (max-width: 1398px) {
+.dddbanner{
+  display:flex;
+  content: "\A";
+  white-space: pre;
+}
+
 }
 
 
@@ -622,6 +659,9 @@ p, b{
     width: 100%;
   }
 
+  .dddbanner{
+    all: unset;
+  }
 
   .footer_img{
     width: 1.5em;
@@ -663,6 +703,15 @@ p, b{
   .quartc{
     width: 33.33%;
   }
+
+  .current_page{
+    width: 33.33%!important;
+  }
+
+  .not_current_page{
+    width: 33.33%!important;
+  }
+
   .logo{
     display: none;
   }
@@ -686,6 +735,6 @@ p, b{
   }
 
   .right_push_pad{
-    padding-right: 12vw;
+    padding-right: 8vw;
   }
 }
