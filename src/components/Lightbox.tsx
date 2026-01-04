@@ -30,28 +30,7 @@ export const Lightbox = ({ images, initialIndex, onClose }: LightboxProps) => {
     setCurrentIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0));
   };
 
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (initialIndex === null) return;
-
-      if (e.key === "ArrowLeft") {
-        e.preventDefault();
-        handlePrev();
-      }
-      if (e.key === "ArrowRight") {
-        e.preventDefault();
-        handleNext();
-      }
-      if (e.key === "Escape") {
-        e.preventDefault();
-        onClose();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentIndex, initialIndex]);
+  // Keyboard navigation disabled
 
   // Scroll lock when lightbox opens
   useEffect(() => {
