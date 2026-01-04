@@ -42,7 +42,7 @@ export default function Portfolio() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-base font-bold tracking-[0] leading-[25px] transition-opacity duration-300 ${
+                  className={`text-sm font-medium tracking-[0] leading-[25px] transition-opacity duration-300 ${
                     isActive ? "text-black" : "text-gray-400 hover:text-black"
                   }`}
                 >
@@ -87,7 +87,7 @@ export default function Portfolio() {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-lg font-bold tracking-[0] leading-[25px] transition-opacity duration-300 ${
+                className={`text-sm font-medium tracking-[0] leading-[25px] transition-opacity duration-300 ${
                   isActive
                     ? "text-black"
                     : "text-gray-400 hover:text-black"
