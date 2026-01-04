@@ -60,6 +60,26 @@ export default function About() {
                 </div>
 
                 <div className="pt-8">
+                  <h3 className="text-title-3 font-serif mb-4">Education</h3>
+                  
+                  <div className="space-y-4 text-subhead">
+                    <div>
+                      <p className="font-semibold mb-2">University of Michigan</p>
+                      <p className="text-gray-600">
+                        Master of Science in Information · Human-Computer Interaction (HCI) emphasis · 2021
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className="font-semibold mb-2">University of Arizona</p>
+                      <p className="text-gray-600">
+                        Bachelor of Science in Information Science & Technology · 2019
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-8">
                   <h3 className="text-title-3 font-serif mb-4">Contact</h3>
                   <p className="text-subhead">
                     <span className="font-semibold">Email:</span> contact@marcuschen.com<br />
