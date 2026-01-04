@@ -1,8 +1,8 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
-export const LeftInfoPanel = () => {
-  return <div className="h-auto flex flex-col p-[25px] pb-0 max-w-[900px] select-none md:h-full md:p-10 md:pr-20 md:pb-0">
+export const LeftInfoPanel = ({ className }: { className?: string }) => {
+  return <div className={`h-auto flex flex-col items-center justify-center text-center p-[25px] pb-0 max-w-[900px] mx-auto select-none md:h-full md:p-10 md:pb-0 ${className || ''}`}>
       {/* Name */}
-      <h2 className="text-[14vw] font-medium leading-[1em] mt-0 mb-[55px] relative left-0 md:text-[5.2rem] md:mt-[55px] md:left-[-7px]">Sam
+      <h2 className="text-[14vw] font-medium leading-[1em] mt-0 mb-[55px] md:text-[5.2rem] md:mt-[55px]">Sam
 Puri</h2>
 
       {/* Role */}
@@ -21,7 +21,6 @@ Puri</h2>
         </div>
 
         
-
         
       </div>
     </div>;
