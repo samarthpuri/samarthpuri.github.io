@@ -1,10 +1,8 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import photographerPortrait from "@/assets/photographer-portrait.jpg";
-
 export default function About() {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       <main className="flex-1 px-4 md:px-8 py-12">
@@ -12,11 +10,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12">
             {/* Left Column - Portrait */}
             <div className="md:col-span-2">
-              <img
-                src={photographerPortrait}
-                alt="Marcus Chen"
-                className="w-full max-w-md mx-auto md:mx-0 object-cover"
-              />
+              
             </div>
 
             {/* Right Column - Biography */}
@@ -96,6 +90,5 @@ export default function About() {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 }
