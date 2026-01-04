@@ -74,11 +74,13 @@ export default function Portfolio() {
 
         {/* Divider */}
         <div className="w-0.5 bg-[#efebe7] relative">
-          <div className="absolute top-1/2 left-0 w-0.5 h-[200px] bg-black transform -translate-y-1/2 translate-y-[25px]" />
+          
         </div>
 
         {/* Right Panel */}
-        <div className="w-1/2 h-full overflow-y-auto" style={{ scrollBehavior: "smooth" }}>
+        <div className="w-1/2 h-full overflow-y-auto" style={{
+        scrollBehavior: "smooth"
+      }}>
           <GalleryGrid mode={galleryMode} onImageClick={index => setLightboxIndex(index)} />
         </div>
       </div>
