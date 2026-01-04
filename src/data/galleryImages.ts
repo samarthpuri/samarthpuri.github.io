@@ -6,7 +6,9 @@ export const galleryImages = [
       original: "/images/gallery-1.jpg"
     },
     photographer: "Ioan.T",
-    pexelsId: 34526119
+    pexelsId: 34526119,
+    title: "Project One",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 2,
@@ -15,7 +17,9 @@ export const galleryImages = [
       original: "/images/gallery-2.jpg"
     },
     photographer: "Pexels User",
-    pexelsId: 21337713
+    pexelsId: 21337713,
+    title: "Project Two",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 3,
@@ -24,7 +28,9 @@ export const galleryImages = [
       original: "/images/gallery-3.jpg"
     },
     photographer: "Vladislav Murashko",
-    pexelsId: 5990737
+    pexelsId: 5990737,
+    title: "Project Three",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 4,
@@ -33,7 +39,9 @@ export const galleryImages = [
       original: "/images/gallery-4.jpg"
     },
     photographer: "Petr Ganaj",
-    pexelsId: 17826908
+    pexelsId: 17826908,
+    title: "Project Four",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 5,
@@ -42,7 +50,9 @@ export const galleryImages = [
       original: "/images/gallery-5.jpg"
     },
     photographer: "Josh Sorenson",
-    pexelsId: 831889
+    pexelsId: 831889,
+    title: "Project Five",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 6,
@@ -51,7 +61,9 @@ export const galleryImages = [
       original: "/images/gallery-6.jpg"
     },
     photographer: "Elizaveta Dushechkina",
-    pexelsId: 3750717
+    pexelsId: 3750717,
+    title: "Project Six",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 7,
@@ -60,7 +72,9 @@ export const galleryImages = [
       original: "/images/gallery-7.jpg"
     },
     photographer: "Maksim Goncharenok",
-    pexelsId: 4412930
+    pexelsId: 4412930,
+    title: "Project Seven",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 8,
@@ -69,7 +83,9 @@ export const galleryImages = [
       original: "/images/gallery-8.jpg"
     },
     photographer: "Arın  Turkay",
-    pexelsId: 1088158
+    pexelsId: 1088158,
+    title: "Project Eight",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 9,
@@ -78,7 +94,9 @@ export const galleryImages = [
       original: "/images/gallery-9.jpg"
     },
     photographer: "Hazy Mokhlas",
-    pexelsId: 47480
+    pexelsId: 47480,
+    title: "Project Nine",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 10,
@@ -87,7 +105,9 @@ export const galleryImages = [
       original: "/images/gallery-10.jpg"
     },
     photographer: "Ready Rey",
-    pexelsId: 6774396
+    pexelsId: 6774396,
+    title: "Project Ten",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 11,
@@ -96,7 +116,9 @@ export const galleryImages = [
       original: "/images/gallery-11.jpg"
     },
     photographer: "Ari Roberts",
-    pexelsId: 9637571
+    pexelsId: 9637571,
+    title: "Project Eleven",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 12,
@@ -105,7 +127,9 @@ export const galleryImages = [
       original: "/images/gallery-12.jpg"
     },
     photographer: "Jessica Lewis 🦋 thepaintedsquare",
-    pexelsId: 189378
+    pexelsId: 189378,
+    title: "Project Twelve",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 13,
@@ -114,7 +138,9 @@ export const galleryImages = [
       original: "/images/gallery-13.jpg"
     },
     photographer: "Davide De Giovanni",
-    pexelsId: 1649685
+    pexelsId: 1649685,
+    title: "Project Thirteen",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 14,
@@ -123,7 +149,9 @@ export const galleryImages = [
       original: "/images/gallery-14.jpg"
     },
     photographer: "Pixabay",
-    pexelsId: 52514
+    pexelsId: 52514,
+    title: "Project Fourteen",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 15,
@@ -132,7 +160,9 @@ export const galleryImages = [
       original: "/images/gallery-15.jpg"
     },
     photographer: "Tiarra Sorte",
-    pexelsId: 30337239
+    pexelsId: 30337239,
+    title: "Project Fifteen",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 16,
@@ -141,7 +171,9 @@ export const galleryImages = [
       original: "/images/gallery-16.jpg"
     },
     photographer: "Samuel Crosland",
-    pexelsId: 2557232
+    pexelsId: 2557232,
+    title: "Project Sixteen",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 17,
@@ -150,7 +182,9 @@ export const galleryImages = [
       original: "/images/gallery-17.jpg"
     },
     photographer: "Min An",
-    pexelsId: 667229
+    pexelsId: 667229,
+    title: "Project Seventeen",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 18,
@@ -159,7 +193,9 @@ export const galleryImages = [
       original: "/images/gallery-18.jpg"
     },
     photographer: "Mariam Antadze",
-    pexelsId: 10026615
+    pexelsId: 10026615,
+    title: "Project Eighteen",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 19,
@@ -168,7 +204,9 @@ export const galleryImages = [
       original: "/images/gallery-19.jpg"
     },
     photographer: "Takeshi Arai",
-    pexelsId: 4107337
+    pexelsId: 4107337,
+    title: "Project Nineteen",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 20,
@@ -177,7 +215,9 @@ export const galleryImages = [
       original: "/images/gallery-20.jpg"
     },
     photographer: "Zukiman Mohamad",
-    pexelsId: 134875
+    pexelsId: 134875,
+    title: "Project Twenty",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 21,
@@ -186,7 +226,9 @@ export const galleryImages = [
       original: "/images/gallery-21.jpg"
     },
     photographer: "Yan Krukau",
-    pexelsId: 7233906
+    pexelsId: 7233906,
+    title: "Project Twenty-One",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 22,
@@ -195,7 +237,9 @@ export const galleryImages = [
       original: "/images/gallery-22.jpg"
     },
     photographer: "Lany-Jade Mondou",
-    pexelsId: 12375513
+    pexelsId: 12375513,
+    title: "Project Twenty-Two",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 23,
@@ -204,7 +248,9 @@ export const galleryImages = [
       original: "/images/gallery-23.jpg"
     },
     photographer: "Najmul Hasan",
-    pexelsId: 3761178
+    pexelsId: 3761178,
+    title: "Project Twenty-Three",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 24,
@@ -213,7 +259,9 @@ export const galleryImages = [
       original: "/images/gallery-24.jpg"
     },
     photographer: "Ann Zzz",
-    pexelsId: 8226817
+    pexelsId: 8226817,
+    title: "Project Twenty-Four",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 25,
@@ -222,7 +270,9 @@ export const galleryImages = [
       original: "/images/gallery-25.jpg"
     },
     photographer: "Alice equilibrio",
-    pexelsId: 17072767
+    pexelsId: 17072767,
+    title: "Project Twenty-Five",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 26,
@@ -231,7 +281,9 @@ export const galleryImages = [
       original: "/images/gallery-26.jpg"
     },
     photographer: "Vlada Karpovich",
-    pexelsId: 6634646
+    pexelsId: 6634646,
+    title: "Project Twenty-Six",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 27,
@@ -240,7 +292,9 @@ export const galleryImages = [
       original: "/images/gallery-27.jpg"
     },
     photographer: "Valerie Voila",
-    pexelsId: 8086137
+    pexelsId: 8086137,
+    title: "Project Twenty-Seven",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 28,
@@ -249,7 +303,9 @@ export const galleryImages = [
       original: "/images/gallery-28.jpg"
     },
     photographer: "William Warby",
-    pexelsId: 21533300
+    pexelsId: 21533300,
+    title: "Project Twenty-Eight",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 29,
@@ -258,7 +314,9 @@ export const galleryImages = [
       original: "/images/gallery-29.jpg"
     },
     photographer: "Matthias Zomer",
-    pexelsId: 914911
+    pexelsId: 914911,
+    title: "Project Twenty-Nine",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 30,
@@ -267,7 +325,9 @@ export const galleryImages = [
       original: "/images/gallery-30.jpg"
     },
     photographer: "Alice equilibrio",
-    pexelsId: 17072766
+    pexelsId: 17072766,
+    title: "Project Thirty",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 31,
@@ -276,7 +336,9 @@ export const galleryImages = [
       original: "/images/gallery-31.jpg"
     },
     photographer: "Nugroho  Wahyu",
-    pexelsId: 3101767
+    pexelsId: 3101767,
+    title: "Project Thirty-One",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 32,
@@ -285,7 +347,9 @@ export const galleryImages = [
       original: "/images/gallery-32.jpg"
     },
     photographer: "Кристина Александрова",
-    pexelsId: 3750665
+    pexelsId: 3750665,
+    title: "Project Thirty-Two",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 33,
@@ -294,7 +358,9 @@ export const galleryImages = [
       original: "/images/gallery-33.jpg"
     },
     photographer: "Designecologist",
-    pexelsId: 1369653
+    pexelsId: 1369653,
+    title: "Project Thirty-Three",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 34,
@@ -303,7 +369,9 @@ export const galleryImages = [
       original: "/images/gallery-34.jpg"
     },
     photographer: "Elliot Fais",
-    pexelsId: 20106383
+    pexelsId: 20106383,
+    title: "Project Thirty-Four",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 35,
@@ -312,7 +380,9 @@ export const galleryImages = [
       original: "/images/gallery-35.jpg"
     },
     photographer: "Beatriz Paludetto",
-    pexelsId: 2039887
+    pexelsId: 2039887,
+    title: "Project Thirty-Five",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 36,
@@ -321,7 +391,9 @@ export const galleryImages = [
       original: "/images/gallery-36.jpg"
     },
     photographer: "Gilberto Olimpio",
-    pexelsId: 3686220
+    pexelsId: 3686220,
+    title: "Project Thirty-Six",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 37,
@@ -330,7 +402,9 @@ export const galleryImages = [
       original: "/images/gallery-37.jpg"
     },
     photographer: "FWStudio",
-    pexelsId: 129728
+    pexelsId: 129728,
+    title: "Project Thirty-Seven",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 38,
@@ -339,7 +413,9 @@ export const galleryImages = [
       original: "/images/gallery-38.jpg"
     },
     photographer: "Vlada Karpovich",
-    pexelsId: 4452390
+    pexelsId: 4452390,
+    title: "Project Thirty-Eight",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 39,
@@ -348,7 +424,9 @@ export const galleryImages = [
       original: "/images/gallery-39.jpg"
     },
     photographer: "Valeri Mak",
-    pexelsId: 3989394
+    pexelsId: 3989394,
+    title: "Project Thirty-Nine",
+    description: "A brief description of this project and the work involved."
   },
   {
     id: 40,
@@ -357,6 +435,8 @@ export const galleryImages = [
       original: "/images/gallery-40.jpg"
     },
     photographer: "Evie Shaffer",
-    pexelsId: 2395258
+    pexelsId: 2395258,
+    title: "Project Forty",
+    description: "A brief description of this project and the work involved."
   },
 ];
