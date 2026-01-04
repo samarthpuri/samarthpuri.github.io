@@ -17,10 +17,7 @@ export default function About() {
               
               <div className="space-y-6 text-body text-gray-700 leading-relaxed">
                 <p>
-                  Marcus Chen is a visual artist and photographer based in New York, 
-                  specializing in capturing the profound beauty found in both human connection and the natural world. 
-                  His work bridges documentary photography and fine art, creating visual narratives that span 
-                  portraiture, wildlife, abstract compositions, and cultural exploration.
+                  I’m a full-stack product designer working across research, strategy, design, and code. I enjoy building systems where design decisions shape how people think, trust, and scale with technology.
                 </p>
 
                 <p>
