@@ -1,6 +1,6 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 export const LeftInfoPanel = ({ className }: { className?: string }) => {
-  return <div className={`h-auto flex flex-col items-center justify-center text-center p-[25px] pb-0 max-w-[900px] mx-auto select-none md:h-full md:p-10 md:pb-0 ${className || ''}`}>
+  return <div className={`h-auto flex flex-col justify-center p-[25px] pb-0 max-w-[900px] mx-auto select-none md:h-full md:p-10 md:pb-0 ${className || ''}`}>
       {/* Name */}
       <h2 className="text-[14vw] font-medium leading-[1em] mt-0 mb-[55px] md:text-[5.2rem] md:mt-[55px]">Sam
 Puri</h2>
