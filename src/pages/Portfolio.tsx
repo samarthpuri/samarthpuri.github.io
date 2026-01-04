@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "@/components/ui/resizable";
 import { LeftInfoPanel } from "@/components/LeftInfoPanel";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { Lightbox } from "@/components/Lightbox";
@@ -67,29 +66,21 @@ export default function Portfolio() {
       </header>
 
       {/* Split Screen Layout */}
-      <div className="pt-[55px] h-[calc(100vh-55px)] overflow-hidden">
-        <ResizablePanelGroup direction="horizontal" className="h-full">
-          {/* Left Panel */}
-          <ResizablePanel defaultSize={50} minSize={33} maxSize={65}>
-            <LeftInfoPanel />
-          </ResizablePanel>
+      <div className="pt-[55px] h-[calc(100vh-55px)] overflow-hidden flex">
+        {/* Left Panel */}
+        <div className="w-1/2 h-full">
+          <LeftInfoPanel />
+        </div>
 
-          {/* Draggable Divider */}
-          <ResizableHandle className="w-0.5 bg-[#efebe7] hover:bg-gray-400 transition-colors duration-300 relative group cursor-col-resize">
-            {/* Visual indicator line (200px black line in center) */}
-            <div className="absolute top-1/2 left-0 w-0.5 h-[200px] bg-black transform -translate-y-1/2 translate-y-[25px]" />
-            {/* Wider interactive area (15px) */}
-            <span className="absolute top-0 bottom-0 w-[15px] bg-transparent transform -translate-x-1/2 cursor-col-resize" />
-          </ResizableHandle>
+        {/* Divider */}
+        <div className="w-0.5 bg-[#efebe7] relative">
+          <div className="absolute top-1/2 left-0 w-0.5 h-[200px] bg-black transform -translate-y-1/2 translate-y-[25px]" />
+        </div>
 
-          {/* Right Panel */}
-          <ResizablePanel defaultSize={50} minSize={35} maxSize={67} style={{
-          overflowY: "auto",
-          scrollBehavior: "smooth"
-        }}>
-            <GalleryGrid mode={galleryMode} onImageClick={index => setLightboxIndex(index)} />
-          </ResizablePanel>
-        </ResizablePanelGroup>
+        {/* Right Panel */}
+        <div className="w-1/2 h-full overflow-y-auto" style={{ scrollBehavior: "smooth" }}>
+          <GalleryGrid mode={galleryMode} onImageClick={index => setLightboxIndex(index)} />
+        </div>
       </div>
 
       {/* Lightbox Modal */}
