@@ -1,10 +1,15 @@
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { galleryImages } from "@/data/galleryImages";
 
+const navigation = [
+  { name: "Work", href: "/" },
+  { name: "About", href: "/about" }
+];
+
 const ImageDetail = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
+  const location = useLocation();
   const imageIndex = parseInt(id || "0", 10);
   const image = galleryImages[imageIndex];
 
@@ -23,24 +28,29 @@ const ImageDetail = () => {
 
   return (
     <div className="fixed inset-0 bg-white overflow-hidden">
-      {/* Navigation Links */}
-      <nav className="absolute top-6 left-10 z-[1090] flex gap-6">
-        <Link 
-          to="/" 
-          className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          Work
-        </Link>
-        <Link 
-          to="/about" 
-          className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          About
-        </Link>
-      </nav>
+      {/* Header */}
+      <header className="flex justify-between items-center h-[55px] px-10 py-4 absolute top-0 left-0 right-0 z-[1090] bg-white">
+        <h1 className="text-lg font-bold tracking-[0] leading-[25px]">
+          <Link to="/" className="hover:opacity-80 transition-opacity duration-300">Sam Puri</Link>
+        </h1>
+        <nav className="flex items-center gap-6">
+          {navigation.map(item => {
+            const isActive = location.pathname === item.href;
+            return (
+              <Link 
+                key={item.name} 
+                to={item.href} 
+                className={`text-sm font-medium tracking-[0] leading-[25px] transition-opacity duration-300 ${isActive ? "text-black" : "text-gray-400 hover:text-black"}`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+        </nav>
+      </header>
 
       {/* Content Area */}
-      <div className="absolute top-0 bottom-[75px] left-0 right-0">
+      <div className="absolute top-[55px] bottom-[75px] left-0 right-0">
         <div className="absolute w-full inset-0 whitespace-nowrap">
           <div className="inline-block absolute w-full h-full p-10 text-center">
             <div className="absolute inset-0 whitespace-nowrap text-[0] inline-block w-full h-full p-10 before:content-[''] before:inline-block before:h-full before:w-0 before:align-middle">
