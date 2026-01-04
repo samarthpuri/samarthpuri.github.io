@@ -20,13 +20,9 @@ Puri</h2>
           <p>Currently at <a href="https://twilio.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">Twilio</a></p>
         </div>
 
-        <a href="mailto:studio@marcuschen.com" className="block font-medium hover:opacity-50 transition-opacity duration-300">
-          studio@marcuschen.com
-        </a>
+        
 
-        <a href="http://instagram.com/marcuschen" target="_blank" rel="noopener noreferrer" className="block font-medium hover:opacity-50 transition-opacity duration-300">
-          Instagram
-        </a>
+        
       </div>
     </div>;
 };
