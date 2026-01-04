@@ -37,12 +37,7 @@ export default function About() {
                   most vulnerable and powerful states.
                 </p>
 
-                <p>
-                  He is a recipient of the World Press Photo Award and has exhibited his work 
-                  internationally, including solo exhibitions at the International Center of Photography 
-                  and the Museum of Contemporary Photography. Marcus also teaches photography 
-                  workshops and serves as a mentor for emerging visual artists.
-                </p>
+                
 
                 <div className="pt-8">
                   <h3 className="text-title-3 font-serif mb-4">Select Clients</h3>
