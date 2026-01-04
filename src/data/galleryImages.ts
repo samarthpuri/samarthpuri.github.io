@@ -32,7 +32,7 @@ export const galleryImages = [
     photographer: "Vladislav Murashko",
     pexelsId: 5990737,
     title: "Intelligent Routing",
-    subtitle: "Human-in-the-Loop Infrastructure",
+    subtitle: "Human in the loop infrastructure",
     description: "Designed assisted-intelligence routing for complex telecom decisions."
   },
   {
