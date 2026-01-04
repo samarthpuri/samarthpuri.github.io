@@ -75,7 +75,6 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
-    cursor: none;
   }
 
   body {
@@ -95,36 +94,6 @@ All colors MUST be HSL.
     letter-spacing: -0.04em;
     line-height: 1.1em;
   }
-
-  a {
-    text-decoration: none;
-    background: linear-gradient(to top, rgba(59, 81, 163, 1) 0%, rgba(252, 70, 107, 1) 100%) no-repeat;
-    background-size: 100% 2px;
-    background-position: bottom;
-    transition: background-size 0.5s ease-in, color 0.5s ease-in;
-  }
-
-  a:hover {
-    background-size: 100% 100%;
-    color: white !important;
-  }
-
-  a:hover * {
-    color: white !important;
-  }
-}
-
-/* Custom circular cursor */
-.custom-cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background-color: rgb(59, 81, 163);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out;
 }
 
 /* Custom utility classes */
