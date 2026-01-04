@@ -31,29 +31,41 @@ export default function About() {
                 
 
                 <div className="pt-8">
-                  <h3 className="text-title-3 font-serif mb-4">Select Clients</h3>
+                  <h3 className="text-title-3 font-serif mb-4">Work history</h3>
                   
                   <div className="space-y-4 text-subhead">
                     <div>
-                      <p className="font-semibold mb-2">Foundations & Institutions</p>
+                      <p className="font-semibold mb-2">Twilio</p>
                       <p className="text-gray-600">
-                        Ford Foundation · Guggenheim Museum · MacArthur Foundation · 
-                        Whitney Museum of American Art
+                        Senior Product Designer · February 2024 – Present
                       </p>
                     </div>
 
                     <div>
-                      <p className="font-semibold mb-2">Editorial</p>
+                      <p className="font-semibold mb-2">Twilio</p>
                       <p className="text-gray-600">
-                        The New Yorker · Vanity Fair · The New York Times Magazine · 
-                        Time · National Geographic · Rolling Stone
+                        Product Designer · February 2022 – February 2024
                       </p>
                     </div>
 
                     <div>
-                      <p className="font-semibold mb-2">Commercial</p>
+                      <p className="font-semibold mb-2">Twilio</p>
                       <p className="text-gray-600">
-                        Apple · Netflix · Spotify · Adobe · The Atlantic
+                        Product Design Intern · May 2021 – August 2021
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className="font-semibold mb-2">University of Michigan</p>
+                      <p className="text-gray-600">
+                        UX Researcher · February 2020 – August 2020
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className="font-semibold mb-2">University of Arizona</p>
+                      <p className="text-gray-600">
+                        UX Researcher · August 2018 – May 2019
                       </p>
                     </div>
                   </div>
