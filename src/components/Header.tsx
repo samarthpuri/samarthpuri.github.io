@@ -3,10 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navigation = [
-  { name: "Featured", href: "/" },
-  { name: "Portraits", href: "/portraits" },
-  { name: "Documentary", href: "/documentary" },
-  { name: "Editorial", href: "/editorial" },
+  { name: "Work", href: "/" },
   { name: "About", href: "/about" },
 ];
 

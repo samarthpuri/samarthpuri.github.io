@@ -1,10 +1,10 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
   ResizablePanelGroup,
   ResizablePanel,
   ResizableHandle,
 } from "@/components/ui/resizable";
-import { GalleryControls } from "@/components/GalleryControls";
 import { LeftInfoPanel } from "@/components/LeftInfoPanel";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { Lightbox } from "@/components/Lightbox";
@@ -13,19 +13,17 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 type GalleryMode = "2x" | "4x" | "full";
 
-export default function Portfolio() {
-  const [galleryMode, setGalleryMode] = useState<GalleryMode>("2x");
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const images = galleryImages; // Use static images
-  const isMobile = useIsMobile();
+const navigation = [
+  { name: "Work", href: "/" },
+  { name: "About", href: "/about" },
+];
 
-  // Handle full view mode
-  const handleModeChange = (mode: GalleryMode) => {
-    if (mode === "full") {
-      setLightboxIndex(0); // Open lightbox at first image
-    }
-    setGalleryMode(mode);
-  };
+export default function Portfolio() {
+  const [galleryMode] = useState<GalleryMode>("2x");
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const images = galleryImages;
+  const isMobile = useIsMobile();
+  const location = useLocation();
 
   // Mobile layout (stacked)
   if (isMobile) {
@@ -33,17 +31,26 @@ export default function Portfolio() {
       <div className="min-h-screen flex flex-col bg-white">
         <header className="flex justify-between items-center h-[55px] px-5 py-4 bg-white">
           <h1 className="text-base font-bold tracking-[0] leading-[25px]">
-            <a
-              href="/"
-              className="hover:opacity-80 transition-opacity duration-300"
-              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-            >
+            <Link to="/" className="hover:opacity-80 transition-opacity duration-300">
               Marcus Chen
-            </a>
+            </Link>
           </h1>
+          <nav className="flex items-center gap-4">
+            {navigation.map((item) => {
+              const isActive = location.pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`text-base font-bold tracking-[0] leading-[25px] transition-opacity duration-300 ${
+                    isActive ? "text-black" : "text-gray-400 hover:text-black"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
+          </nav>
         </header>
 
         <main>
@@ -69,45 +76,28 @@ export default function Portfolio() {
       {/* Simplified Header */}
       <header className="flex justify-between items-center h-[55px] px-10 py-4 absolute top-0 left-0 right-0 z-[1080] bg-white">
         <h1 className="text-lg font-bold tracking-[0] leading-[25px]">
-          <a
-            href="/"
-            className="hover:opacity-80 transition-opacity duration-300"
-            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-          >
+          <Link to="/" className="hover:opacity-80 transition-opacity duration-300">
             Marcus Chen
-          </a>
+          </Link>
         </h1>
-        <div className="flex items-center gap-1.5">
-          {/* Gallery Controls (fade out when lightbox opens) */}
-          <div
-            className={
-              lightboxIndex !== null
-                ? "opacity-0 pointer-events-none transition-opacity duration-100"
-                : "opacity-100 transition-opacity duration-200"
-            }
-          >
-            <GalleryControls
-              mode={galleryMode}
-              onModeChange={handleModeChange}
-            />
-          </div>
-
-          {/* Close Button (fade in when lightbox opens) */}
-          <button
-            onClick={() => setLightboxIndex(null)}
-            className={`text-lg font-bold text-black tracking-[0] leading-[25px] hover:opacity-50 transition-opacity duration-300 border-none bg-transparent cursor-pointer ${
-              lightboxIndex !== null
-                ? "opacity-100 pointer-events-auto"
-                : "opacity-0 pointer-events-none"
-            }`}
-            aria-label="Close lightbox"
-          >
-            Close
-          </button>
-        </div>
+        <nav className="flex items-center gap-6">
+          {navigation.map((item) => {
+            const isActive = location.pathname === item.href;
+            return (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`text-lg font-bold tracking-[0] leading-[25px] transition-opacity duration-300 ${
+                  isActive
+                    ? "text-black"
+                    : "text-gray-400 hover:text-black"
+                }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+        </nav>
       </header>
 
       {/* Split Screen Layout */}
