@@ -59,7 +59,7 @@ export default function Portfolio() {
         <nav className="flex items-center gap-6">
           {navigation.map(item => {
           const isActive = location.pathname === item.href;
-          return <Link key={item.name} to={item.href} className={`text-lg font-bold tracking-[0] leading-[25px] transition-opacity duration-300 ${isActive ? "text-black" : "text-gray-400 hover:text-black"}`}>
+          return <Link key={item.name} to={item.href} className={`text-sm font-medium tracking-[0] leading-[25px] transition-opacity duration-300 ${isActive ? "text-black" : "text-gray-400 hover:text-black"}`}>
                 {item.name}
               </Link>;
         })}
