@@ -1,23 +1,15 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import photographerPortrait from "@/assets/photographer-portrait.jpg";
-
 export default function About() {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       <main className="flex-1 px-4 md:px-8 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12">
             {/* Left Column - Portrait */}
-            <div className="md:col-span-2">
-              <img
-                src={photographerPortrait}
-                alt="Marcus Chen"
-                className="w-full max-w-md mx-auto md:mx-0 object-cover"
-              />
-            </div>
+            
 
             {/* Right Column - Biography */}
             <div className="md:col-span-3">
@@ -25,32 +17,19 @@ export default function About() {
               
               <div className="space-y-6 text-body text-gray-700 leading-relaxed">
                 <p>
+                  
                   Marcus Chen is a visual artist and photographer based in New York, 
                   specializing in capturing the profound beauty found in both human connection and the natural world. 
                   His work bridges documentary photography and fine art, creating visual narratives that span 
                   portraiture, wildlife, abstract compositions, and cultural exploration.
+                
                 </p>
 
-                <p>
-                  With over fifteen years of experience, Marcus has developed a signature style 
-                  characterized by emotional depth, striking compositions, and an intuitive use of light. 
-                  His photographs have been featured in publications including 
-                  National Geographic, The New York Times Magazine, and Aperture.
-                </p>
+                
 
-                <p>
-                  Marcus's diverse projects explore themes of identity, nature, and human resilience. 
-                  His series "Quiet Moments" documents intimate portraits across cultures, 
-                  while "Wild Grace" captures the raw beauty of wildlife and landscapes in their 
-                  most vulnerable and powerful states.
-                </p>
+                
 
-                <p>
-                  He is a recipient of the World Press Photo Award and has exhibited his work 
-                  internationally, including solo exhibitions at the International Center of Photography 
-                  and the Museum of Contemporary Photography. Marcus also teaches photography 
-                  workshops and serves as a mentor for emerging visual artists.
-                </p>
+                
 
                 <div className="pt-8">
                   <h3 className="text-title-3 font-serif mb-4">Select Clients</h3>
@@ -96,6 +75,5 @@ export default function About() {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 }
