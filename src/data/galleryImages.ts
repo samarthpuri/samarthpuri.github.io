@@ -68,7 +68,7 @@ export const galleryImages = [
     photographer: "Elizaveta Dushechkina",
     pexelsId: 3750717,
     title: "Twilio Lookup Sandbox",
-    subtitle: "Safe Production Testing",
+    subtitle: "Pre-production testing",
     description: "Built sandbox and lookup tools to test phone numbers without full setup."
   },
 ];
