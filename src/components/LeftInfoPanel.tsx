@@ -36,7 +36,7 @@ Puri</h2>
       <div className="space-y-[30px] text-2xl font-medium pl-5 -ml-[25px]">
         <div className="leading-snug">
           <p>508 W. 26th St., 7A</p>
-          <p>New York, NY 10001</p>
+          
         </div>
 
         <a href="mailto:studio@marcuschen.com" className="block font-medium hover:opacity-50 transition-opacity duration-300">
