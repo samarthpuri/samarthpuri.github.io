@@ -2,6 +2,7 @@ import { Dialog } from "@/components/ui/dialog";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { useState, useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
+import { Link } from "react-router-dom";
 interface LightboxProps {
   images: Array<{
     src: {
@@ -96,6 +97,24 @@ export const Lightbox = ({
           
 
           
+
+          {/* Navigation Links */}
+          <nav className="absolute top-6 left-10 z-[1090] flex gap-6">
+            <Link 
+              to="/" 
+              onClick={onClose}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Work
+            </Link>
+            <Link 
+              to="/about" 
+              onClick={onClose}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              About
+            </Link>
+          </nav>
 
           {/* Components (contains metadata) */}
           <div className="lg-components absolute bottom-0 left-0 right-0 z-[1080] will-change-transform transition-transform duration-[350ms] ease-out">
