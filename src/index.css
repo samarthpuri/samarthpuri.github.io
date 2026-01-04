@@ -75,6 +75,7 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    cursor: none;
   }
 
   body {
@@ -94,6 +95,19 @@ All colors MUST be HSL.
     letter-spacing: -0.04em;
     line-height: 1.1em;
   }
+}
+
+/* Custom circular cursor */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(59, 81, 163);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
 }
 
 /* Custom utility classes */
