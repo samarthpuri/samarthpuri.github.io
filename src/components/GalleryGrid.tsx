@@ -1,4 +1,5 @@
 import { galleryImages } from "@/data/galleryImages";
+import { useNavigate } from "react-router-dom";
 
 interface GalleryGridProps {
   mode: "2x" | "4x" | "full";
@@ -7,8 +8,10 @@ interface GalleryGridProps {
 
 export const GalleryGrid = ({ onImageClick }: GalleryGridProps) => {
   const images = galleryImages;
+  const navigate = useNavigate();
 
   const handleThumbnailClick = (index: number) => {
+    navigate(`/image/${index}`);
     onImageClick?.(index);
   };
 
