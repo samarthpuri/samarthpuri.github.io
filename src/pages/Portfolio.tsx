@@ -41,7 +41,7 @@ export default function Portfolio() {
         </header>
 
         <main>
-          <LeftInfoPanel />
+          <LeftInfoPanel className="pb-[20px]" />
           <GalleryGrid mode="2x" onImageClick={index => setLightboxIndex(index)} />
         </main>
 
