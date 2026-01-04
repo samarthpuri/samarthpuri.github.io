@@ -94,9 +94,9 @@ export default function About() {
                 <div className="pt-8">
                   <h3 className="text-title-3 font-serif mb-4">Contact</h3>
                   <p className="text-subhead">
-                    <span className="font-semibold">Email:</span> contact@marcuschen.com<br />
-                    <span className="font-semibold">Phone:</span> +1 (555) 123-4567<br />
-                    <span className="font-semibold">Studio:</span> New York, NY
+                    <span className="font-semibold">Email:</span> samarth.ak.puri@gmail.com<br />
+                    <span className="font-semibold">Phone:</span> (408) 386-7786<br />
+                    <span className="font-semibold">LinkedIn:</span> <a href="https://linkedin.com/in/samarth-puri" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">linkedin.com/in/samarth-puri</a>
                   </p>
                 </div>
               </div>
