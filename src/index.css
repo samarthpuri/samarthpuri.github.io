@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Editorial Photography Design System - Monochromatic */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 9%;
+
+    --radius: 0;
+
+    /* Typography tokens */
+    --font-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* Grayscale tokens */
+    --gray-50: 0 0% 98%;
+    --gray-100: 0 0% 96%;
+    --gray-200: 0 0% 90%;
+    --gray-300: 0 0% 83%;
+    --gray-500: 0 0% 45%;
+    --gray-700: 0 0% 25%;
+    --gray-900: 0 0% 9%;
+
+    /* Transition tokens */
+    --transition-fast: 150ms ease-in-out;
+    --transition-medium: 300ms ease-in-out;
+    --transition-slow: 500ms ease-in-out;
+  }
+}
+
+/* Fluid typography scaling (matches original spec) */
+@media (min-width: 768px) {
+  :root {
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    font-size: 26.666px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans;
+    letter-spacing: -0.04em;
+    line-height: 1.1em;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-large-title {
+    font-size: 2.125rem;
+    line-height: 2.5625rem;
+  }
+
+  .text-title-1 {
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+  }
+
+  .text-title-2 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+
+  .text-title-3 {
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+  }
+
+  .text-headline {
+    font-size: 1.0625rem;
+    line-height: 1.375rem;
+  }
+
+  .text-body {
+    font-size: 1.0625rem;
+    line-height: 1.375rem;
+  }
+
+  .text-subhead {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+
+  .text-footnote {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom scrollbar styling for left panel */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 2px;
+  background-color: #fff;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #e9e9e9;
+  cursor: grab;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+/* Preview expansion animation */
+@keyframes preview-in {
+  0% {
+    opacity: 0;
+    padding-top: 0%;
+  }
+  100% {
+    opacity: 1;
+    padding-top: 50%;
+  }
+}
+
+.animate-preview-in {
+  animation: preview-in 1s ease forwards;
+  animation-delay: 100ms;
+  opacity: 0;
+}
+
+/* Lightbox close button delayed fade-in */
+@keyframes fade-in-delayed {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-delayed {
+  animation: fade-in-delayed 200ms ease forwards;
+  animation-delay: 800ms;
+  opacity: 0;
+}
+
+/* Lightbox image centering trick (matches original) */
+.lg-img-wrap::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* Touch interaction optimizations */
+.lg-outer {
+  touch-action: pan-y;
+}
+
+.lg-backdrop {
+  touch-action: none;
+  overscroll-behavior: contain;
+}
+
+/* Prevent pull-to-refresh interference */
+body.lightbox-open {
+  overscroll-behavior: contain;
+}
