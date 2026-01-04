@@ -95,6 +95,14 @@ All colors MUST be HSL.
     letter-spacing: -0.04em;
     line-height: 1.1em;
   }
+
+  a {
+    text-decoration: none;
+    background-image: linear-gradient(90deg, hsl(var(--foreground)), rgb(59, 81, 163));
+    background-size: 100% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+  }
 }
 
 /* Custom circular cursor */
