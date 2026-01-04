@@ -98,15 +98,14 @@ All colors MUST be HSL.
 
   a {
     text-decoration: none;
-    background-image: radial-gradient(circle, rgba(59, 81, 163, 1) 0%, rgba(252, 70, 107, 1) 100%);
-    background-size: 100% 200%;
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    transition: background-position 0.3s ease, color 0.3s ease;
+    background: linear-gradient(to top, rgba(59, 81, 163, 1) 0%, rgba(252, 70, 107, 1) 100%) no-repeat;
+    background-size: 100% 2px;
+    background-position: bottom;
+    transition: background-size 0.3s ease, color 0.3s ease;
   }
 
   a:hover {
-    background-position: 0 0;
+    background-size: 100% 100%;
     color: white !important;
   }
 
