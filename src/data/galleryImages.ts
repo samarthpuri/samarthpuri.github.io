@@ -8,7 +8,7 @@ export const galleryImages = [
     photographer: "Ioan.T",
     pexelsId: 34526119,
     title: "Making Technical Setup a Growth Lever",
-    subtitle: "SendGrid Onboarding",
+    subtitle: "SendGrid onboarding",
     description: "Front-loaded required technical setup to improve activation quality and production readiness."
   },
   {
@@ -20,7 +20,7 @@ export const galleryImages = [
     photographer: "Pexels User",
     pexelsId: 21337713,
     title: "Console Consolidation",
-    subtitle: "Twilio × SendGrid",
+    subtitle: "Twilio x SendGrid",
     description: "Redesigned account and identity architecture to unify two platforms into one."
   },
   {
@@ -44,7 +44,7 @@ export const galleryImages = [
     photographer: "Petr Ganaj",
     pexelsId: 17826908,
     title: "RCS Launch",
-    subtitle: "Zero Code Change Expansion",
+    subtitle: "Zero code change expansion",
     description: "Launched RCS via a single abstraction with automatic fallback and no code changes."
   },
   {
@@ -56,7 +56,7 @@ export const galleryImages = [
     photographer: "Josh Sorenson",
     pexelsId: 831889,
     title: "Twilio Verify Onboarding",
-    subtitle: "Secure by Default",
+    subtitle: "Improved usability",
     description: "Simplified verification setup while preserving critical security controls."
   },
   {
