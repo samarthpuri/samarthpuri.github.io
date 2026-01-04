@@ -17,7 +17,7 @@ Puri</h2>
       {/* Contact Section */}
       <div className="space-y-[30px] text-2xl font-medium pl-5 -ml-[25px]">
         <div className="leading-snug">
-          <p>Currently at <a href="https://twilio.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-50 transition-opacity duration-300">Twilio</a></p>
+          <p>Currently at <a href="https://twilio.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-300">Twilio</a></p>
         </div>
 
         <a href="mailto:studio@marcuschen.com" className="block font-medium hover:opacity-50 transition-opacity duration-300">
