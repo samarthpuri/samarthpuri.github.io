@@ -25,10 +25,7 @@ export default function About() {
                 </p>
 
                 <p>
-                  Marcus's diverse projects explore themes of identity, nature, and human resilience. 
-                  His series "Quiet Moments" documents intimate portraits across cultures, 
-                  while "Wild Grace" captures the raw beauty of wildlife and landscapes in their 
-                  most vulnerable and powerful states.
+                  I'm happiest working on complex products where design is a core part of the system—not a layer added at the end.
                 </p>
 
                 
