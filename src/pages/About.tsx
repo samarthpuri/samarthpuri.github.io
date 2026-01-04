@@ -21,10 +21,7 @@ export default function About() {
                 </p>
 
                 <p>
-                  With over fifteen years of experience, Marcus has developed a signature style 
-                  characterized by emotional depth, striking compositions, and an intuitive use of light. 
-                  His photographs have been featured in publications including 
-                  National Geographic, The New York Times Magazine, and Aperture.
+                  I grew up in a household of designers—my mom an interior designer, my dad an architect—which taught me to value structure, craft, and how environments influence behavior. Today, that shows up in my work designing developer platforms: clear mental models, strong foundations, and experiences that feel predictable in production.
                 </p>
 
                 <p>
