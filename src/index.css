@@ -101,7 +101,7 @@ All colors MUST be HSL.
     background: linear-gradient(to top, rgba(59, 81, 163, 1) 0%, rgba(252, 70, 107, 1) 100%) no-repeat;
     background-size: 100% 2px;
     background-position: bottom;
-    transition: background-size 0.3s ease, color 0.3s ease;
+    transition: background-size 0.25s ease-in, color 0.25s ease-in;
   }
 
   a:hover {
