@@ -7,12 +7,14 @@ import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import ImageDetail from "./pages/ImageDetail";
 import NotFound from "./pages/NotFound";
+import CustomCursor from "./components/CustomCursor";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <CustomCursor />
       <Toaster />
       <Sonner />
       <BrowserRouter>
