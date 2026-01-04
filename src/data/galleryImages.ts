@@ -44,7 +44,7 @@ export const galleryImages = [
     photographer: "Petr Ganaj",
     pexelsId: 17826908,
     title: "RCS Launch",
-    subtitle: "Zero-Code-Change Expansion",
+    subtitle: "Zero Code Change Expansion",
     description: "Launched RCS via a single abstraction with automatic fallback and no code changes."
   },
   {
