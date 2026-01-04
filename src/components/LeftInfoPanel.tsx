@@ -6,9 +6,10 @@ export const LeftInfoPanel = () => {
 Puri</h2>
 
       {/* Role */}
-      <h3 className="text-2xl font-medium mt-0 mb-8 md:mb-10">
-        Visual Artist & Photographer
-      </h3>
+      <div className="mb-8 md:mb-10">
+        <h3 className="text-2xl font-medium leading-tight">Full Stack Product Designer</h3>
+        <h3 className="text-2xl font-medium leading-tight text-muted-foreground">Research + Design + Code</h3>
+      </div>
 
       {/* Bio Scrollable Area */}
       
