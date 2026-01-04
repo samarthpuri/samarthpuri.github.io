@@ -1,4 +1,3 @@
-import { useState, Fragment, useEffect } from "react";
 import { galleryImages } from "@/data/galleryImages";
 
 interface GalleryGridProps {
@@ -6,60 +5,47 @@ interface GalleryGridProps {
   onImageClick?: (index: number) => void;
 }
 
-export const GalleryGrid = ({ mode, onImageClick }: GalleryGridProps) => {
-  const [isFading, setIsFading] = useState(false);
-
-  // Use static images instead of API
+export const GalleryGrid = ({ onImageClick }: GalleryGridProps) => {
   const images = galleryImages;
 
-  // Original uses percentage widths on flex items, not grid-cols
-  const itemWidth = mode === "2x" ? "w-1/2" : "w-1/4";
-
-  // Handle mode change with fadeOut transition (matches original)
-  const [currentMode, setCurrentMode] = useState(mode);
-  useEffect(() => {
-    if (mode !== currentMode) {
-      setIsFading(true);
-      setTimeout(() => {
-        setCurrentMode(mode);
-        setTimeout(() => {
-          setIsFading(false);
-        }, 100);
-      }, 200);
-    }
-  }, [mode, currentMode]);
-
   const handleThumbnailClick = (index: number) => {
-    // Direct lightbox on both mobile and desktop
     onImageClick?.(index);
   };
 
   return (
-    <div
-      className={`flex flex-wrap p-[30px_10px] pt-0 bg-white min-w-[300px] mx-auto transition-opacity duration-200 md:p-[30px_20px] ${isFading ? "opacity-0" : "opacity-100"}`}
-    >
-      {images.map((image, index) => (
-        <Fragment key={image.id}>
+    <div className="flex flex-col p-6 md:p-10 bg-white">
+      {images.map((image, index) => {
+        const isEven = index % 2 === 0;
+        
+        return (
           <div
-            className={`${itemWidth} border-white border-b-[6px] border-x-0 border-t-0 box-border flex flex-wrap justify-start items-start transition-opacity duration-300 md:border-[20px]`}
+            key={image.id}
+            className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-10 md:mb-16 items-center`}
           >
-            <div className="flex flex-wrap justify-start items-start relative w-full">
+            {/* Image */}
+            <div className={`${isEven ? 'md:order-1' : 'md:order-2'} order-1`}>
               <button
                 onClick={() => handleThumbnailClick(index)}
-                className="w-full inline px-[6px] py-px text-center cursor-pointer h-full"
-                aria-label={`Image ${index + 1} by ${image.photographer}`}
+                className="w-full cursor-pointer"
+                aria-label={`View ${image.title}`}
               >
                 <img
                   src={image.src.large}
-                  alt={`Minimalist Nature ${index + 1}`}
-                  className="max-w-full object-cover cursor-pointer"
+                  alt={image.title}
+                  className="w-full object-cover"
                   loading="lazy"
                 />
               </button>
             </div>
+            
+            {/* Text */}
+            <div className={`${isEven ? 'md:order-2' : 'md:order-1'} order-2 flex flex-col justify-center`}>
+              <h3 className="text-2xl md:text-3xl font-medium mb-3">{image.title}</h3>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{image.description}</p>
+            </div>
           </div>
-        </Fragment>
-      ))}
+        );
+      })}
     </div>
   );
 };
