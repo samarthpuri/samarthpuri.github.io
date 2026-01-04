@@ -7,7 +7,9 @@ Puri</h2>
 
       {/* Role */}
       <h3 className="text-2xl font-medium mt-0 mb-8 md:mb-10">
-        Visual Artist & Photographer
+        Full Stack Product Designer
+        <br />
+        Research + Design + Code
       </h3>
 
       {/* Bio Scrollable Area */}
