@@ -9,9 +9,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12">
             {/* Left Column - Portrait */}
-            <div className="md:col-span-2">
-              
-            </div>
+            
 
             {/* Right Column - Biography */}
             <div className="md:col-span-3">
