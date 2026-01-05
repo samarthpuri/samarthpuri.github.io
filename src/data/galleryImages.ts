@@ -2,8 +2,8 @@ export const galleryImages = [
   {
     id: 1,
     src: {
-      large: "/images/gallery-1.jpg",
-      original: "/images/gallery-1.jpg"
+      large: "/images/gallery-1.png",
+      original: "/images/gallery-1.png"
     },
     photographer: "Ioan.T",
     pexelsId: 34526119,
