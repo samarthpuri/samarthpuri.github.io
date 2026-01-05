@@ -54,8 +54,8 @@ export const galleryImages = [
   {
     id: 5,
     src: {
-      large: "/images/gallery-5.jpg",
-      original: "/images/gallery-5.jpg"
+      large: "/images/verify-onboarding.png",
+      original: "/images/verify-onboarding.png"
     },
     photographer: "Josh Sorenson",
     pexelsId: 831889,
