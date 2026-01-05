@@ -29,13 +29,13 @@ export default function Portfolio() {
         <header className="flex justify-between items-center h-[55px] px-5 py-4 bg-background">
           <h1 className="text-base font-bold tracking-[0] leading-[25px]">
             <Link to="/" className="hover:opacity-80 transition-opacity duration-300">
-              Marcus Chen
+              Sam Puri
             </Link>
           </h1>
           <nav className="flex items-center gap-4">
             {navigation.map(item => {
             const isActive = location.pathname === item.href;
-            return <Link key={item.name} to={item.href} className={`text-base font-bold tracking-[0] leading-[25px] transition-opacity duration-300 ${isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
+            return <Link key={item.name} to={item.href} className={`text-sm font-medium tracking-[0] leading-[25px] transition-opacity duration-300 ${isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
                   {item.name}
                 </Link>;
           })}
