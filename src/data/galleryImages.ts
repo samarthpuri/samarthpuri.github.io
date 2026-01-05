@@ -41,8 +41,8 @@ export const galleryImages = [
   {
     id: 4,
     src: {
-      large: "/images/gallery-4.jpg",
-      original: "/images/gallery-4.jpg"
+      large: "/images/rcs-launch.png",
+      original: "/images/rcs-launch.png"
     },
     photographer: "Petr Ganaj",
     pexelsId: 17826908,
