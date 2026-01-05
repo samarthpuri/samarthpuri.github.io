@@ -92,7 +92,7 @@ export default function About() {
                 <div className="pt-8">
                   <h3 className="text-title-3 font-serif mb-4">Contact</h3>
                   <p className="text-subhead">
-                    <span className="font-semibold">Email:</span> samarth.ak.puri@gmail.com<br />
+                    <span className="font-semibold">Email:</span> <a href="mailto:samarth.ak.puri@gmail.com?subject=Your%20Portfolio%20Caught%20My%20Eye%20%F0%9F%91%8B" className="text-muted-foreground hover:text-foreground transition-colors">samarth.ak.puri@gmail.com</a><br />
                     <span className="font-semibold">Phone:</span> (408) 386-7786<br />
                     <span className="font-semibold">LinkedIn:</span> <a href="https://linkedin.com/in/samarth-puri" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">linkedin.com/in/samarth-puri</a>
                   </p>
