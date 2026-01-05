@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const navigation = [
   { name: "Work", href: "/" },
@@ -8,15 +9,16 @@ const navigation = [
 
 export const Header = () => {
   const location = useLocation();
+  const isMobile = useIsMobile();
 
   return (
-    <header className="flex justify-between items-center h-[55px] px-5 md:px-10 py-4 bg-background">
-      <h1 className="text-base md:text-lg font-bold tracking-[0] leading-[25px]">
+    <header className={`flex justify-between items-center h-[55px] ${isMobile ? 'px-5' : 'px-10'} py-4 bg-background`}>
+      <h1 className={`${isMobile ? 'text-base' : 'text-lg'} font-bold tracking-[0] leading-[25px]`}>
         <Link to="/" className="hover:opacity-80 transition-opacity duration-300">
           Sam Puri
         </Link>
       </h1>
-      <nav className="flex items-center gap-4 md:gap-6">
+      <nav className={`flex items-center ${isMobile ? 'gap-4' : 'gap-6'}`}>
         {navigation.map((item) => {
           const isActive = location.pathname === item.href;
           return (
