@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { usePassword } from "@/contexts/PasswordContext";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Lock } from "lucide-react";
+import { Lock, X } from "lucide-react";
 
 interface PasswordGateProps {
   children: React.ReactNode;
@@ -12,6 +13,7 @@ export function PasswordGate({ children }: PasswordGateProps) {
   const { isUnlocked, unlock } = usePassword();
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,12 +24,24 @@ export function PasswordGate({ children }: PasswordGateProps) {
     }
   };
 
+  const handleClose = () => {
+    navigate("/");
+  };
+
   if (isUnlocked) {
     return <>{children}</>;
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white px-4 relative">
+      <button
+        onClick={handleClose}
+        className="absolute top-4 right-4 p-2 text-muted-foreground hover:text-foreground transition-colors"
+        aria-label="Close"
+      >
+        <X className="h-6 w-6" />
+      </button>
+
       <div className="w-full max-w-sm space-y-8 text-center">
         <div className="space-y-2">
           <div className="flex justify-center">
