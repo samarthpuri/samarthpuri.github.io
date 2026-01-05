@@ -16,9 +16,7 @@ export default function About() {
               <h2 className="text-title-1 font-serif mb-6">About</h2>
               
               <div className="space-y-6 text-body text-gray-700 leading-relaxed">
-                <p>
-                  I’m a full-stack product designer working across research, strategy, design, and code. I enjoy building systems where design decisions shape how people think, trust, and scale with technology.
-                </p>
+                <p>I’m a full-stack product designer working across research, strategy, design, and engineering. I enjoy building systems where design decisions shape how people think, trust, and scale with technology.</p>
 
                 <p>
                   I grew up in a household of designers—my mom an interior designer, my dad an architect—which taught me to value structure, craft, and how environments influence behavior. Today, that shows up in my work designing developer platforms: clear mental models, strong foundations, and experiences that feel predictable in production.
