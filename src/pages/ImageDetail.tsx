@@ -1,6 +1,8 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { galleryImages } from "@/data/galleryImages";
+import { usePassword } from "@/contexts/PasswordContext";
+import { PasswordGate } from "@/components/PasswordGate";
 
 const navigation = [
   { name: "Work", href: "/" },
@@ -10,6 +12,7 @@ const navigation = [
 const ImageDetail = () => {
   const { id } = useParams();
   const location = useLocation();
+  const { isUnlocked } = usePassword();
   const imageIndex = parseInt(id || "0", 10);
   const image = galleryImages[imageIndex];
 
@@ -24,6 +27,11 @@ const ImageDetail = () => {
         <p className="text-muted-foreground">Image not found</p>
       </div>
     );
+  }
+
+  // Show password gate if project is protected and not unlocked
+  if (image.passwordProtected && !isUnlocked) {
+    return <PasswordGate><></></PasswordGate>;
   }
 
   return (

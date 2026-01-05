@@ -9,7 +9,8 @@ export const galleryImages = [
     pexelsId: 34526119,
     title: "Making Technical Setup a Growth Lever",
     subtitle: "SendGrid onboarding",
-    description: "Front-loaded required technical setup to improve activation quality and production readiness."
+    description: "Front-loaded required technical setup to improve activation quality and production readiness.",
+    passwordProtected: true
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ export const galleryImages = [
     pexelsId: 21337713,
     title: "Console Consolidation",
     subtitle: "Twilio x SendGrid",
-    description: "Redesigned account and identity architecture to unify two platforms into one."
+    description: "Redesigned account and identity architecture to unify two platforms into one.",
+    passwordProtected: true
   },
   {
     id: 3,
@@ -33,7 +35,8 @@ export const galleryImages = [
     pexelsId: 5990737,
     title: "Intelligent Routing",
     subtitle: "Human in the loop infrastructure",
-    description: "Designed assisted-intelligence routing for complex telecom decisions."
+    description: "Designed assisted-intelligence routing for complex telecom decisions.",
+    passwordProtected: true
   },
   {
     id: 4,
@@ -45,7 +48,8 @@ export const galleryImages = [
     pexelsId: 17826908,
     title: "RCS Launch",
     subtitle: "Zero code change expansion",
-    description: "Launched RCS via a single abstraction with automatic fallback and no code changes."
+    description: "Launched RCS via a single abstraction with automatic fallback and no code changes.",
+    passwordProtected: true
   },
   {
     id: 5,
@@ -57,7 +61,8 @@ export const galleryImages = [
     pexelsId: 831889,
     title: "Twilio Verify Onboarding",
     subtitle: "Improved usability",
-    description: "Simplified verification setup while preserving critical security controls."
+    description: "Simplified verification setup while preserving critical security controls.",
+    passwordProtected: true
   },
   {
     id: 6,
@@ -69,6 +74,7 @@ export const galleryImages = [
     pexelsId: 3750717,
     title: "Twilio Lookup Sandbox",
     subtitle: "Pre-production testing",
-    description: "Built sandbox and lookup tools to test phone numbers without full setup."
+    description: "Built sandbox and lookup tools to test phone numbers without full setup.",
+    passwordProtected: true
   },
 ];
