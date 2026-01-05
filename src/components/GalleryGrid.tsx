@@ -35,7 +35,7 @@ export const GalleryGrid = ({ onImageClick }: GalleryGridProps) => {
                 <img
                   src={image.src.large}
                   alt={image.title}
-                  className="w-full object-cover"
+                  className="w-full aspect-[1.4/1] object-cover"
                   loading="lazy"
                 />
               </button>
