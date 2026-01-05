@@ -10,7 +10,11 @@ export const GalleryGrid = ({ onImageClick }: GalleryGridProps) => {
   const images = galleryImages;
   const navigate = useNavigate();
 
-  const handleThumbnailClick = (index: number) => {
+  const handleThumbnailClick = (index: number, externalLink?: string) => {
+    if (externalLink) {
+      window.open(externalLink, '_blank', 'noopener,noreferrer');
+      return;
+    }
     navigate(`/image/${index}`);
     onImageClick?.(index);
   };
@@ -28,7 +32,7 @@ export const GalleryGrid = ({ onImageClick }: GalleryGridProps) => {
             {/* Image */}
             <div className={`${isEven ? 'md:order-1' : 'md:order-2'} order-1`}>
               <button
-                onClick={() => handleThumbnailClick(index)}
+                onClick={() => handleThumbnailClick(index, image.externalLink)}
                 className="w-full cursor-pointer"
                 aria-label={`View ${image.title}`}
               >
@@ -47,7 +51,7 @@ export const GalleryGrid = ({ onImageClick }: GalleryGridProps) => {
               <p className="text-[10px] md:text-[11px] text-muted-foreground/50 mb-1.5">{image.subtitle}</p>
               <p className="text-[10px] md:text-[11px] text-muted-foreground/70 leading-relaxed mb-2">{image.description}</p>
               <button
-                onClick={() => handleThumbnailClick(index)}
+                onClick={() => handleThumbnailClick(index, image.externalLink)}
                 className="text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 underline underline-offset-2 w-fit"
               >
                 View details

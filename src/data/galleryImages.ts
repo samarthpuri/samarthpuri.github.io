@@ -75,6 +75,7 @@ export const galleryImages = [
     title: "Twilio Lookup Sandbox",
     subtitle: "Pre-production testing",
     description: "Built sandbox and lookup tools to test phone numbers without full setup.",
-    passwordProtected: true
+    passwordProtected: false,
+    externalLink: "https://www.twilio.com/docs/lookup"
   },
 ];
