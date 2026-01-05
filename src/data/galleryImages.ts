@@ -67,8 +67,8 @@ export const galleryImages = [
   {
     id: 6,
     src: {
-      large: "/images/gallery-6.jpg",
-      original: "/images/gallery-6.jpg"
+      large: "/images/lookup-sandbox.png",
+      original: "/images/lookup-sandbox.png"
     },
     photographer: "Elizaveta Dushechkina",
     pexelsId: 3750717,
