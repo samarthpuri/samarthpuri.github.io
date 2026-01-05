@@ -20,7 +20,7 @@ export const GalleryGrid = ({ onImageClick }: GalleryGridProps) => {
   };
 
   return (
-    <div className="flex flex-col p-6 md:p-10 bg-white">
+    <div className="flex flex-col p-6 md:p-10 bg-background">
       {images.map((image, index) => {
         const isEven = index % 2 === 0;
         
