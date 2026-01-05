@@ -79,9 +79,9 @@ export default function Portfolio() {
           </ResizablePanel>
 
           {/* Draggable Divider */}
-          <ResizableHandle className="w-0.5 bg-[#efebe7] hover:bg-gray-400 transition-colors duration-300 relative group cursor-col-resize">
+          <ResizableHandle className="w-0.5 bg-border dark:bg-border hover:bg-muted-foreground transition-colors duration-300 relative group cursor-col-resize">
             {/* Visual indicator line (200px black line in center) */}
-            <div className="absolute top-1/2 left-0 w-0.5 h-[200px] bg-black transform -translate-y-1/2 translate-y-[25px]" />
+            <div className="absolute top-1/2 left-0 w-0.5 h-[200px] bg-foreground transform -translate-y-1/2 translate-y-[25px]" />
             {/* Wider interactive area (15px) */}
             <span className="absolute top-0 bottom-0 w-[15px] bg-transparent transform -translate-x-1/2 cursor-col-resize" />
           </ResizableHandle>

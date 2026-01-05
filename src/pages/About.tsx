@@ -15,7 +15,7 @@ export default function About() {
             <div className="md:col-span-3">
               <h2 className="text-title-1 font-serif mb-6">About</h2>
               
-              <div className="space-y-6 text-body text-gray-700 leading-relaxed">
+              <div className="space-y-6 text-body text-muted-foreground leading-relaxed">
                 <p>I’m a full-stack product designer working across research, strategy, design, and engineering. I enjoy building systems where design decisions shape how people think, trust, and scale with technology.</p>
 
                 <p>
@@ -34,35 +34,35 @@ export default function About() {
                   <div className="space-y-4 text-subhead">
                     <div>
                       <p className="font-semibold mb-2">Twilio</p>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         Senior Product Designer · February 2024 – Present
                       </p>
                     </div>
 
                     <div>
                       <p className="font-semibold mb-2">Twilio</p>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         Product Designer · February 2022 – February 2024
                       </p>
                     </div>
 
                     <div>
                       <p className="font-semibold mb-2">Twilio</p>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         Product Design Intern · May 2021 – August 2021
                       </p>
                     </div>
 
                     <div>
                       <p className="font-semibold mb-2">University of Michigan</p>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         UX Researcher · February 2020 – August 2020
                       </p>
                     </div>
 
                     <div>
                       <p className="font-semibold mb-2">University of Arizona</p>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         UX Researcher · August 2018 – May 2019
                       </p>
                     </div>
@@ -75,14 +75,14 @@ export default function About() {
                   <div className="space-y-4 text-subhead">
                     <div>
                       <p className="font-semibold mb-2">University of Michigan</p>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         Master of Science in Information · Human-Computer Interaction (HCI) emphasis · 2021
                       </p>
                     </div>
 
                     <div>
                       <p className="font-semibold mb-2">University of Arizona</p>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         Bachelor of Science in Information Science & Technology · 2019
                       </p>
                     </div>
