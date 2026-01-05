@@ -28,8 +28,8 @@ export const galleryImages = [
   {
     id: 3,
     src: {
-      large: "/images/gallery-3.jpg",
-      original: "/images/gallery-3.jpg"
+      large: "/images/gallery-3.png",
+      original: "/images/gallery-3.png"
     },
     photographer: "Vladislav Murashko",
     pexelsId: 5990737,
