@@ -37,6 +37,9 @@ All colors MUST be HSL.
     --input: 0 0% 90%;
     --ring: 0 0% 9%;
 
+    /* Separator token for light mode */
+    --separator: 0 0% 0%;
+
     --radius: 0;
 
     /* Typography tokens */
@@ -60,41 +63,44 @@ All colors MUST be HSL.
 
   .dark {
     --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
+    --foreground: 0 0% 95%;
 
     --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 0 0% 95%;
 
     --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 0 0% 98%;
+    --primary: 0 0% 95%;
     --primary-foreground: 0 0% 9%;
 
     --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 95%;
 
     --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted-foreground: 0 0% 65%;
 
     --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 0 0% 95%;
 
     --destructive: 0 62% 50%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 83%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 0 0% 80%;
+
+    /* Separator token for dark mode */
+    --separator: 0 0% 100%;
 
     /* Grayscale tokens - inverted */
     --gray-50: 0 0% 9%;
     --gray-100: 0 0% 12%;
     --gray-200: 0 0% 18%;
     --gray-300: 0 0% 25%;
-    --gray-500: 0 0% 55%;
+    --gray-500: 0 0% 60%;
     --gray-700: 0 0% 75%;
-    --gray-900: 0 0% 98%;
+    --gray-900: 0 0% 95%;
   }
 }
 
