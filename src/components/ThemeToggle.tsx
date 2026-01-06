@@ -1,10 +1,8 @@
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -13,27 +11,62 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <Button variant="ghost" size="icon" className="h-8 w-8">
-        <span className="h-4 w-4" />
-      </Button>
+      <div className="w-14 h-7 rounded-full bg-muted" />
     );
   }
 
   const isDark = resolvedTheme === "dark";
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      className="h-8 w-8"
+    <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
+      className={`
+        relative w-14 h-7 rounded-full transition-colors duration-300 ease-in-out
+        ${isDark ? 'bg-neutral-800' : 'bg-neutral-200'}
+        focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2
+      `}
+      aria-label="Toggle theme"
     >
-      {isDark ? (
-        <Moon className="h-4 w-4 text-foreground" />
-      ) : (
-        <Sun className="h-4 w-4 text-foreground" />
-      )}
+      {/* Sliding circle with icon */}
+      <span
+        className={`
+          absolute top-0.5 flex items-center justify-center
+          w-6 h-6 rounded-full
+          transition-all duration-300 ease-in-out
+          ${isDark 
+            ? 'left-0.5 bg-neutral-600' 
+            : 'left-[calc(100%-26px)] bg-neutral-400'
+          }
+        `}
+      >
+        {/* Moon icon for dark mode */}
+        <svg
+          className={`
+            w-3.5 h-3.5 text-white absolute
+            transition-all duration-300
+            ${isDark ? 'opacity-100 rotate-0' : 'opacity-0 rotate-90'}
+          `}
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+        </svg>
+        
+        {/* Sun icon for light mode */}
+        <svg
+          className={`
+            w-3.5 h-3.5 text-white absolute
+            transition-all duration-300
+            ${isDark ? 'opacity-0 -rotate-90' : 'opacity-100 rotate-0'}
+          `}
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+        </svg>
+      </span>
+      
       <span className="sr-only">Toggle theme</span>
-    </Button>
+    </button>
   );
 }
