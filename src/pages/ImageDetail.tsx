@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { galleryImages } from "@/data/galleryImages";
 import { usePassword } from "@/contexts/PasswordContext";
 import { PasswordGate } from "@/components/PasswordGate";
+import { ThemeToggle } from "@/components/ThemeToggle";
+
 const navigation = [{
   name: "Work",
   href: "/"
@@ -10,6 +12,7 @@ const navigation = [{
   name: "About",
   href: "/about"
 }];
+
 const ImageDetail = () => {
   const {
     id
@@ -25,7 +28,7 @@ const ImageDetail = () => {
     window.scrollTo(0, 0);
   }, []);
   if (!image) {
-    return <div className="min-h-screen flex items-center justify-center">
+    return <div className="min-h-screen flex items-center justify-center bg-background">
         <p className="text-muted-foreground">Image not found</p>
       </div>;
   }
@@ -34,19 +37,20 @@ const ImageDetail = () => {
   if (image.passwordProtected && !isUnlocked) {
     return <PasswordGate><></></PasswordGate>;
   }
-  return <div className="fixed inset-0 bg-white overflow-hidden">
+  return <div className="fixed inset-0 bg-background overflow-hidden">
       {/* Header */}
-      <header className="flex justify-between items-center h-[55px] px-10 py-4 absolute top-0 left-0 right-0 z-[1090] bg-white">
+      <header className="flex justify-between items-center h-[55px] px-10 py-4 absolute top-0 left-0 right-0 z-[1090] bg-background">
         <h1 className="text-lg font-bold tracking-[0] leading-[25px]">
           <Link to="/" className="hover:opacity-80 transition-opacity duration-300">Sam Puri</Link>
         </h1>
         <nav className="flex items-center gap-6">
           {navigation.map(item => {
           const isActive = location.pathname === item.href;
-          return <Link key={item.name} to={item.href} className={`text-sm font-medium tracking-[0] leading-[25px] transition-opacity duration-300 ${isActive ? "text-black" : "text-gray-400 hover:text-black"}`}>
+          return <Link key={item.name} to={item.href} className={`text-sm font-medium tracking-[0] leading-[25px] transition-opacity duration-300 ${isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
                 {item.name}
               </Link>;
         })}
+          <ThemeToggle />
         </nav>
       </header>
 
