@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import photographerPortrait from "@/assets/photographer-portrait.jpg";
+
 export default function About() {
   return (
     <div className="min-h-screen flex flex-col">

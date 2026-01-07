@@ -9,12 +9,13 @@ interface LightboxProps {
       original: string;
       large: string;
     };
-    photographer: string;
     id: number;
+    title?: string;
   }>;
   initialIndex: number | null;
   onClose: () => void;
 }
+
 export const Lightbox = ({
   images,
   initialIndex,
@@ -117,13 +118,13 @@ export const Lightbox = ({
           </nav>
 
           {/* Components (contains metadata) */}
-          <div className="lg-components absolute bottom-0 left-0 right-0 z-[1080] will-change-transform transition-transform duration-[350ms] ease-out">
-            <div id="lightbox-description" className="lg-sub-html absolute bottom-[17px] left-0 text-left px-10 py-[10px] text-black text-[13px] leading-[1.4em] opacity-100 transition-opacity duration-200 ease-out" role="status" aria-live="polite">
-              {currentImage?.photographer}
-              <br />
-              From Pexels
+          {currentImage?.title && (
+            <div className="lg-components absolute bottom-0 left-0 right-0 z-[1080] will-change-transform transition-transform duration-[350ms] ease-out">
+              <div id="lightbox-description" className="lg-sub-html absolute bottom-[17px] left-0 text-left px-10 py-[10px] text-foreground text-[13px] leading-[1.4em] opacity-100 transition-opacity duration-200 ease-out" role="status" aria-live="polite">
+                {currentImage.title}
+              </div>
             </div>
-          </div>
+          )}
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>
     </Dialog>;
