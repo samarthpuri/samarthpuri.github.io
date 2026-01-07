@@ -8,17 +8,15 @@ interface PasswordContextType {
 
 const PasswordContext = createContext<PasswordContextType | undefined>(undefined);
 
-// Placeholder password - replace with actual password in the future
-const PLACEHOLDER_PASSWORD = "portfolio2024";
+// Password validation disabled until backend authentication is configured
+// TODO: Implement secure server-side password validation via Lovable Cloud
 
 export function PasswordProvider({ children }: { children: ReactNode }) {
   const [isUnlocked, setIsUnlocked] = useState(false);
 
-  const unlock = (password: string): boolean => {
-    if (password === PLACEHOLDER_PASSWORD) {
-      setIsUnlocked(true);
-      return true;
-    }
+  const unlock = (_password: string): boolean => {
+    // Always return false - password-protected content is locked
+    // until proper backend authentication is implemented
     return false;
   };
 
