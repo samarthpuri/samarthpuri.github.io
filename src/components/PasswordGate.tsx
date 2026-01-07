@@ -31,7 +31,7 @@ export function PasswordGate({
   if (isUnlocked) {
     return <>{children}</>;
   }
-  return <div className="min-h-screen flex flex-col items-center justify-center bg-white px-4 relative">
+  return <div className="min-h-screen flex flex-col items-center justify-center bg-background px-4 relative">
       <button onClick={handleClose} className="absolute top-4 right-4 p-2 text-muted-foreground hover:text-foreground transition-colors" aria-label="Close">
         <X className="h-6 w-6" />
       </button>
@@ -41,7 +41,7 @@ export function PasswordGate({
           <div className="flex justify-center">
             <Lock className="h-10 w-10 text-muted-foreground" />
           </div>
-          <h1 className="text-xl font-semibold tracking-tight text-gray-100">Password Protected</h1>
+          <h1 className="text-xl font-semibold tracking-tight text-foreground">Password Protected</h1>
           <p className="text-sm text-muted-foreground">
             Enter the password to view the projects
           </p>
