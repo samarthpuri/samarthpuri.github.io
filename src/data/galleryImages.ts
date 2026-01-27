@@ -8,7 +8,7 @@ export const galleryImages = [
     title: "Making Technical Setup a Growth Lever",
     subtitle: "SendGrid onboarding",
     description: "Front-loaded required technical setup to improve activation quality and production readiness.",
-    passwordProtected: true
+    passwordProtected: false
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const galleryImages = [
     title: "Console Consolidation",
     subtitle: "Twilio x SendGrid",
     description: "Redesigned account and identity architecture to unify two platforms into one.",
-    passwordProtected: true
+    passwordProtected: false
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const galleryImages = [
     title: "Intelligent Routing",
     subtitle: "Human in the loop infrastructure",
     description: "Designed assisted-intelligence routing for complex telecom decisions.",
-    passwordProtected: true
+    passwordProtected: false
   },
   {
     id: 4,
