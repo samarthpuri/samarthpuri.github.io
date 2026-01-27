@@ -68,7 +68,7 @@ const ImageDetail = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">{image.caseStudy.goal}</p>
                 {/* Single external URL */}
                 {image.caseStudy.externalUrl && <a href={image.caseStudy.externalUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
-                    View on console.twilio.com →
+                    {image.caseStudy.externalLinkLabel || "View on console.twilio.com →"}
                   </a>}
                 {/* Multiple external links */}
                 {image.caseStudy.externalLinks && <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
