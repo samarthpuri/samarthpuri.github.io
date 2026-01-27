@@ -66,6 +66,6 @@ export const galleryImages = [
     subtitle: "Pre-production testing",
     description: "Built sandbox and lookup tools to test phone numbers without full setup.",
     passwordProtected: false,
-    externalLink: "https://www.twilio.com/docs/lookup"
+    externalLink: "https://signal.twilio.com/"
   },
 ];
