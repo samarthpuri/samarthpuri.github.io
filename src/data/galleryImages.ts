@@ -36,8 +36,8 @@ export const galleryImages = [
   {
     id: 3,
     src: {
-      large: "/images/rcs-launch.png",
-      original: "/images/rcs-launch.png"
+      large: "/images/intelligent-routing.png",
+      original: "/images/intelligent-routing.png"
     },
     title: "Intelligent Routing",
     subtitle: "Human in the loop infrastructure",
