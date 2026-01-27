@@ -59,7 +59,7 @@ const ImageDetail = () => {
         <div className="absolute w-full inset-0 whitespace-nowrap">
           <div className="inline-block absolute w-full h-full p-10 text-center">
             <div className="absolute inset-0 whitespace-nowrap text-[0] inline-block w-full h-full p-10 before:content-[''] before:inline-block before:h-full before:w-0 before:align-middle">
-              <img src={image.src.original} alt={image.title || `Image ${imageIndex + 1}`} className="inline-block align-middle max-w-full max-h-full w-auto h-auto relative" />
+              <img src={image.src.original} alt={image.title || `Image ${imageIndex + 1}`} className="inline-block align-middle max-w-full max-h-full w-auto h-auto relative shadow-[0_2px_12px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.3)] ring-1 ring-black/5 dark:ring-white/10" />
             </div>
           </div>
         </div>
