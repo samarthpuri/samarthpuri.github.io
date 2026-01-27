@@ -41,7 +41,16 @@ export const galleryImages = [
     title: "RCS Launch",
     subtitle: "Zero code change expansion",
     description: "Launched RCS via a single abstraction with automatic fallback and no code changes.",
-    passwordProtected: false
+    passwordProtected: false,
+    caseStudy: {
+      goal: "Launch a new messaging channel (RCS) without requiring developers to rewrite their integrations or manage channel-specific complexity.",
+      solution: "Created a single abstraction with automatic channel fallback. Developers configure messaging intent, and the platform selects the optimal channel without code changes. Established \"zero-code-change expansion\" as a required design principle.",
+      outcome: "Rapid enterprise adoption of RCS messaging, competitive differentiation through developer experience, and a pattern now used for all subsequent channel integrations.",
+      externalLinks: [
+        { label: "console.twilio.com →", url: "https://console.twilio.com/us1/develop/rcs/overview" },
+        { label: "Twilio Press Release →", url: "https://www.twilio.com/en-us/press/releases/rcs-general-availability" }
+      ]
+    }
   },
   {
     id: 5,
