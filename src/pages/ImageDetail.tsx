@@ -4,6 +4,8 @@ import { galleryImages } from "@/data/galleryImages";
 import { usePassword } from "@/contexts/PasswordContext";
 import { PasswordGate } from "@/components/PasswordGate";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { useIsMobile } from "@/hooks/use-mobile";
+
 const navigation = [{
   name: "Work",
   href: "/"
@@ -19,6 +21,7 @@ const ImageDetail = () => {
   const {
     isUnlocked
   } = usePassword();
+  const isMobile = useIsMobile();
   const imageIndex = parseInt(id || "0", 10);
   const image = galleryImages[imageIndex];
   useEffect(() => {
@@ -37,11 +40,11 @@ const ImageDetail = () => {
   }
   return <div className="fixed inset-0 bg-background overflow-hidden">
       {/* Header */}
-      <header className="flex justify-between items-center h-[55px] px-10 py-4 absolute top-0 left-0 right-0 z-[1090] bg-background">
-        <h1 className="text-lg font-bold tracking-[0] leading-[25px]">
+      <header className={`flex justify-between items-center h-[55px] ${isMobile ? 'px-5' : 'px-10'} py-4 absolute top-0 left-0 right-0 z-[1090] bg-background`}>
+        <h1 className={`${isMobile ? 'text-base' : 'text-lg'} font-bold tracking-[0] leading-[25px]`}>
           <Link to="/" className="hover:opacity-80 transition-opacity duration-300">Sam Puri</Link>
         </h1>
-        <nav className="flex items-center gap-6">
+        <nav className={`flex items-center ${isMobile ? 'gap-4' : 'gap-6'}`}>
           {navigation.map(item => {
           const isActive = location.pathname === item.href;
           return <Link key={item.name} to={item.href} className={`text-sm font-medium tracking-[0] leading-[25px] transition-opacity duration-300 ${isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
@@ -64,18 +67,18 @@ const ImageDetail = () => {
           {image.caseStudy && <div className="w-full max-w-4xl mt-12 space-y-8">
               {/* Goal */}
               <div>
-                <h2 className="text-sm font-semibold tracking-wide text-foreground mb-2">The Goal</h2>
-                <p className="text-sm text-muted-foreground leading-relaxed">{image.caseStudy.goal}</p>
+                <h2 className="text-title-3 font-serif mb-4">The Goal</h2>
+                <p className="text-body text-muted-foreground leading-relaxed">{image.caseStudy.goal}</p>
                 {/* Single external URL */}
-{image.caseStudy.externalUrl && <a href={image.caseStudy.externalUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
+                {image.caseStudy.externalUrl && <a href={image.caseStudy.externalUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-subhead text-muted-foreground hover:text-foreground transition-colors duration-300">
                     {image.caseStudy.externalLinkLabel || "View in console.twilio.com →"}
                   </a>}
                 {/* Multiple external links */}
-                {image.caseStudy.externalLinks && <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
+                {image.caseStudy.externalLinks && <div className="flex flex-wrap gap-x-4 gap-y-1 mt-4">
                     {image.caseStudy.externalLinks.map((link: {
                 label: string;
                 url: string;
-              }, index: number) => <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
+              }, index: number) => <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="text-subhead text-muted-foreground hover:text-foreground transition-colors duration-300">
                         {link.label}
                       </a>)}
                   </div>}
@@ -83,14 +86,14 @@ const ImageDetail = () => {
 
               {/* Solution */}
               <div>
-                <h2 className="text-sm font-semibold tracking-wide text-foreground mb-2">The Solution</h2>
-                <p className="text-sm text-muted-foreground leading-relaxed">{image.caseStudy.solution}</p>
+                <h2 className="text-title-3 font-serif mb-4">The Solution</h2>
+                <p className="text-body text-muted-foreground leading-relaxed">{image.caseStudy.solution}</p>
               </div>
 
               {/* Outcome */}
               <div>
-                <h2 className="text-sm font-semibold tracking-wide text-foreground mb-2">The Outcome</h2>
-                <p className="text-sm text-muted-foreground leading-relaxed">{image.caseStudy.outcome}</p>
+                <h2 className="text-title-3 font-serif mb-4">The Outcome</h2>
+                <p className="text-body text-muted-foreground leading-relaxed">{image.caseStudy.outcome}</p>
               </div>
             </div>}
         </div>
