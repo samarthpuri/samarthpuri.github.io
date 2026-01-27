@@ -30,7 +30,12 @@ export const galleryImages = [
     title: "Intelligent Routing",
     subtitle: "Human in the loop infrastructure",
     description: "Designed assisted-intelligence routing for complex telecom decisions.",
-    passwordProtected: false
+    passwordProtected: false,
+    caseStudy: {
+      goal: "Replace manual, error-prone routing processes that required spreadsheets and email threads to coordinate complex telecom decisions across siloed teams.",
+      solution: "Designed an assisted-intelligence system over full automation, recognizing that complex telecom decisions (protocols, aggregator orchestration, routing profiles) require human judgment for edge cases while automation handles routine work.",
+      outcome: "Substantial cost savings, significantly increased routing efficiency, and a shared mental model that connected previously siloed operations and engineering teams."
+    }
   },
   {
     id: 4,
