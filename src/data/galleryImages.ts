@@ -53,7 +53,8 @@ export const galleryImages = [
     title: "Twilio Verify Onboarding",
     subtitle: "Improved usability",
     description: "Simplified verification setup while preserving critical security controls.",
-    passwordProtected: true
+    passwordProtected: false,
+    externalLink: "https://www.twilio.com/docs/verify"
   },
   {
     id: 6,
