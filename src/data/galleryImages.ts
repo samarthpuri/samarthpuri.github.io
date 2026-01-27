@@ -41,8 +41,7 @@ export const galleryImages = [
     title: "RCS Launch",
     subtitle: "Zero code change expansion",
     description: "Launched RCS via a single abstraction with automatic fallback and no code changes.",
-    passwordProtected: false,
-    externalLink: "https://www.twilio.com/en-us/blog/products/launches/rcs-generally-available"
+    passwordProtected: false
   },
   {
     id: 5,
@@ -53,8 +52,7 @@ export const galleryImages = [
     title: "Twilio Verify Onboarding",
     subtitle: "Improved usability",
     description: "Simplified verification setup while preserving critical security controls.",
-    passwordProtected: false,
-    externalLink: "https://www.twilio.com/docs/verify"
+    passwordProtected: false
   },
   {
     id: 6,
@@ -65,7 +63,6 @@ export const galleryImages = [
     title: "Twilio Lookup Sandbox",
     subtitle: "Pre-production testing",
     description: "Built sandbox and lookup tools to test phone numbers without full setup.",
-    passwordProtected: false,
-    externalLink: "https://signal.twilio.com/"
+    passwordProtected: false
   },
 ];
