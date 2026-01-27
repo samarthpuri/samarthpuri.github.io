@@ -36,13 +36,14 @@ export const galleryImages = [
   {
     id: 3,
     src: {
-      large: "/images/gallery-3.png",
-      original: "/images/gallery-3.png"
+      large: "/images/intelligent-routing.png",
+      original: "/images/intelligent-routing.png"
     },
     title: "Intelligent Routing",
     subtitle: "Human in the loop infrastructure",
     description: "Designed assisted-intelligence routing for complex telecom decisions.",
     passwordProtected: false,
+    imageClassName: "-mt-6",
     caseStudy: {
       goal: "Replace manual, error-prone routing processes that required spreadsheets and email threads to coordinate complex telecom decisions across siloed teams.",
       solution: "Designed an assisted-intelligence system over full automation, recognizing that complex telecom decisions (protocols, aggregator orchestration, routing profiles) require human judgment for edge cases while automation handles routine work.",
