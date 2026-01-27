@@ -4,7 +4,6 @@ import { galleryImages } from "@/data/galleryImages";
 import { usePassword } from "@/contexts/PasswordContext";
 import { PasswordGate } from "@/components/PasswordGate";
 import { ThemeToggle } from "@/components/ThemeToggle";
-
 const navigation = [{
   name: "Work",
   href: "/"
@@ -12,7 +11,6 @@ const navigation = [{
   name: "About",
   href: "/about"
 }];
-
 const ImageDetail = () => {
   const {
     id
@@ -55,19 +53,47 @@ const ImageDetail = () => {
       </header>
 
       {/* Content Area */}
-      <div className="absolute top-[55px] bottom-[75px] left-0 right-0">
-        <div className="absolute w-full inset-0 whitespace-nowrap">
-          <div className="inline-block absolute w-full h-full p-10 text-center">
-            <div className="absolute inset-0 whitespace-nowrap text-[0] inline-block w-full h-full p-10 before:content-[''] before:inline-block before:h-full before:w-0 before:align-middle">
-              <img src={image.src.original} alt={image.title || `Image ${imageIndex + 1}`} className="inline-block align-middle max-w-full max-h-full w-auto h-auto relative" />
-            </div>
+      <div className="absolute top-[55px] bottom-0 left-0 right-0 overflow-y-auto">
+        <div className="flex flex-col items-center px-10 py-10">
+          {/* Image */}
+          <div className="w-full flex justify-center">
+            <img src={image.src.original} alt={image.title || `Image ${imageIndex + 1}`} className="w-full h-auto shadow-[0_2px_12px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.3)] ring-1 ring-black/5 dark:ring-white/10" />
           </div>
-        </div>
-      </div>
 
-      {/* Metadata */}
-      <div className="absolute bottom-0 left-0 right-0 z-[1080]">
-        
+          {/* Case Study Content */}
+          {image.caseStudy && <div className="w-full max-w-4xl mt-12 space-y-8">
+              {/* Goal */}
+              <div>
+                <h2 className="text-sm font-semibold tracking-wide text-foreground mb-2">The Goal</h2>
+                <p className="text-sm text-muted-foreground leading-relaxed">{image.caseStudy.goal}</p>
+                {/* Single external URL */}
+{image.caseStudy.externalUrl && <a href={image.caseStudy.externalUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
+                    {image.caseStudy.externalLinkLabel || "View in console.twilio.com →"}
+                  </a>}
+                {/* Multiple external links */}
+                {image.caseStudy.externalLinks && <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
+                    {image.caseStudy.externalLinks.map((link: {
+                label: string;
+                url: string;
+              }, index: number) => <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
+                        {link.label}
+                      </a>)}
+                  </div>}
+              </div>
+
+              {/* Solution */}
+              <div>
+                <h2 className="text-sm font-semibold tracking-wide text-foreground mb-2">The Solution</h2>
+                <p className="text-sm text-muted-foreground leading-relaxed">{image.caseStudy.solution}</p>
+              </div>
+
+              {/* Outcome */}
+              <div>
+                <h2 className="text-sm font-semibold tracking-wide text-foreground mb-2">The Outcome</h2>
+                <p className="text-sm text-muted-foreground leading-relaxed">{image.caseStudy.outcome}</p>
+              </div>
+            </div>}
+        </div>
       </div>
     </div>;
 };
