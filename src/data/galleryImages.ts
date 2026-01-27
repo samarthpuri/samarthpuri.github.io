@@ -63,6 +63,12 @@ export const galleryImages = [
     title: "Twilio Lookup Sandbox",
     subtitle: "Pre-production testing",
     description: "Built sandbox and lookup tools to test phone numbers without full setup.",
-    passwordProtected: false
+    passwordProtected: false,
+    caseStudy: {
+      goal: "Enable developers to test phone number validation and lookup functionality without requiring full production setup or incurring costs.",
+      solution: "Built a sandbox environment allowing developers to validate phone numbers, test formatting, and explore carrier data before committing to production implementation.",
+      outcome: "Reduced integration friction, faster developer onboarding, and increased confidence before going live with phone number validation features.",
+      externalUrl: "https://www.twilio.com"
+    }
   },
 ];
