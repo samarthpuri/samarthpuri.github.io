@@ -12,7 +12,7 @@ export const Header = () => {
   const isMobile = useIsMobile();
 
   return (
-    <header className={`flex justify-between items-center h-[55px] ${isMobile ? 'px-5' : 'px-10'} py-4 bg-background`}>
+    <header className={`flex justify-between items-center h-[55px] ${isMobile ? 'px-5' : 'px-10'} py-4 bg-background sticky top-0 z-50`}>
       <h1 className={`${isMobile ? 'text-base' : 'text-lg'} font-bold tracking-[0] leading-[25px]`}>
         <Link to="/" className="hover:opacity-80 transition-opacity duration-300">
           Sam Puri
