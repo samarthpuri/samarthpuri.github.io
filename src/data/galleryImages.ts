@@ -68,7 +68,7 @@ export const galleryImages = [
       goal: "Enable developers to test phone number validation and lookup functionality without requiring full production setup or incurring costs.",
       solution: "Built a sandbox environment allowing developers to validate phone numbers, test formatting, and explore carrier data before committing to production implementation.",
       outcome: "Reduced integration friction, faster developer onboarding, and increased confidence before going live with phone number validation features.",
-      externalUrl: "https://www.twilio.com"
+      externalUrl: "https://console.twilio.com/us1/develop/lookup"
     }
   },
 ];
