@@ -54,10 +54,10 @@ const ImageDetail = () => {
 
       {/* Content Area */}
       <div className="absolute top-[55px] bottom-0 left-0 right-0 overflow-y-auto">
-        <div className="flex flex-col items-start px-10 py-10">
+        <div className="flex flex-col items-center px-10 py-10">
           {/* Image */}
-          <div className="inline-block">
-            <img src={image.src.original} alt={image.title || `Image ${imageIndex + 1}`} className="h-auto shadow-[0_2px_12px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.3)] ring-1 ring-black/5 dark:ring-white/10" />
+          <div className="w-full flex justify-center">
+            <img src={image.src.original} alt={image.title || `Image ${imageIndex + 1}`} className="w-full h-auto shadow-[0_2px_12px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.3)] ring-1 ring-black/5 dark:ring-white/10" />
           </div>
 
           {/* Case Study Content */}
