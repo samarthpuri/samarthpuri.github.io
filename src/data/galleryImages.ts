@@ -41,7 +41,8 @@ export const galleryImages = [
     title: "RCS Launch",
     subtitle: "Zero code change expansion",
     description: "Launched RCS via a single abstraction with automatic fallback and no code changes.",
-    passwordProtected: true
+    passwordProtected: false,
+    externalLink: "https://www.twilio.com/en-us/blog/products/launches/rcs-generally-available"
   },
   {
     id: 5,
