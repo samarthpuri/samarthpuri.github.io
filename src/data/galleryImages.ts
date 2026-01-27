@@ -19,7 +19,12 @@ export const galleryImages = [
     title: "Console Consolidation",
     subtitle: "Twilio x SendGrid",
     description: "Redesigned account and identity architecture to unify two platforms into one.",
-    passwordProtected: false
+    passwordProtected: false,
+    contactOnly: {
+      email: "samarth.ak.puri@gmail.com",
+      subject: "Twilio x SendGrid Console Consolidation case study",
+      body: "Hey Sam, I came across your Twilio x SendGrid Console Consolidation case study and would love to learn a bit more about it."
+    }
   },
   {
     id: 3,

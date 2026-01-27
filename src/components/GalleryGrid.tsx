@@ -11,8 +11,18 @@ export const GalleryGrid = ({ onImageClick }: GalleryGridProps) => {
   const navigate = useNavigate();
 
   const handleThumbnailClick = (index: number) => {
+    const image = images[index];
+    if (image.contactOnly) {
+      return; // Don't navigate for contact-only projects
+    }
     navigate(`/image/${index}`);
     onImageClick?.(index);
+  };
+
+  const getContactMailto = (contactOnly: { email: string; subject: string; body: string }) => {
+    const subject = encodeURIComponent(contactOnly.subject);
+    const body = encodeURIComponent(contactOnly.body);
+    return `mailto:${contactOnly.email}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -27,18 +37,33 @@ export const GalleryGrid = ({ onImageClick }: GalleryGridProps) => {
           >
             {/* Image */}
             <div className={`${isEven ? 'md:order-1' : 'md:order-2'} order-1`}>
-              <button
-                onClick={() => handleThumbnailClick(index)}
-                className="w-full cursor-pointer"
-                aria-label={`View ${image.title}`}
-              >
-                <img
-                  src={image.src.large}
-                  alt={image.title}
-                  className="w-full aspect-[1.4/1] object-cover"
-                  loading="lazy"
-                />
-              </button>
+              {image.contactOnly ? (
+                <a
+                  href={getContactMailto(image.contactOnly)}
+                  className="w-full block"
+                  aria-label={`Contact about ${image.title}`}
+                >
+                  <img
+                    src={image.src.large}
+                    alt={image.title}
+                    className="w-full aspect-[1.4/1] object-cover"
+                    loading="lazy"
+                  />
+                </a>
+              ) : (
+                <button
+                  onClick={() => handleThumbnailClick(index)}
+                  className="w-full cursor-pointer"
+                  aria-label={`View ${image.title}`}
+                >
+                  <img
+                    src={image.src.large}
+                    alt={image.title}
+                    className="w-full aspect-[1.4/1] object-cover"
+                    loading="lazy"
+                  />
+                </button>
+              )}
             </div>
             
             {/* Text */}
@@ -46,12 +71,21 @@ export const GalleryGrid = ({ onImageClick }: GalleryGridProps) => {
               <h3 className="text-[11px] md:text-xs font-medium mb-0.5 text-muted-foreground">{image.title}</h3>
               <p className="text-[10px] md:text-[11px] text-muted-foreground/50 mb-1.5">{image.subtitle}</p>
               <p className="text-[10px] md:text-[11px] text-muted-foreground/70 leading-relaxed mb-2">{image.description}</p>
-              <button
-                onClick={() => handleThumbnailClick(index)}
-                className="text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 underline underline-offset-2 w-fit"
-              >
-                View details
-              </button>
+              {image.contactOnly ? (
+                <a
+                  href={getContactMailto(image.contactOnly)}
+                  className="text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 underline underline-offset-2 w-fit"
+                >
+                  Contact for information
+                </a>
+              ) : (
+                <button
+                  onClick={() => handleThumbnailClick(index)}
+                  className="text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 underline underline-offset-2 w-fit"
+                >
+                  View details
+                </button>
+              )}
             </div>
           </div>
         );
