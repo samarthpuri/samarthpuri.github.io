@@ -22,7 +22,7 @@ export default function About() {
                 <p>I grew up in a household of designers; my mom being an interior designer, and my dad an architect. It taught me to value structure, craft, and how environments influence behavior. Today, that shows up in my work designing developer platforms: clear mental models, strong foundations, and experiences that feel predictable in production.</p>
 
                 <p>
-                  I'm happiest working on complex products where design is a core part of the system—not a layer added
+                  I'm happiest working on complex products where design is a core part of the system & not a layer added
                   at the end.
                 </p>
 
