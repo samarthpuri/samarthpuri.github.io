@@ -67,8 +67,8 @@ const ImageDetail = () => {
                 <h2 className="text-sm font-semibold tracking-wide text-foreground mb-2">The Goal</h2>
                 <p className="text-sm text-muted-foreground leading-relaxed">{image.caseStudy.goal}</p>
                 {/* Single external URL */}
-                {image.caseStudy.externalUrl && <a href={image.caseStudy.externalUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
-                    Create a SendGrid account →
+{image.caseStudy.externalUrl && <a href={image.caseStudy.externalUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
+                    {image.caseStudy.externalLinkLabel || "View in console.twilio.com →"}
                   </a>}
                 {/* Multiple external links */}
                 {image.caseStudy.externalLinks && <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
