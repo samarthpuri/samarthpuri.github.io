@@ -8,7 +8,14 @@ export const galleryImages = [
     title: "Making Technical Setup a Growth Lever",
     subtitle: "SendGrid onboarding",
     description: "Front-loaded required technical setup to improve activation quality and production readiness.",
-    passwordProtected: false
+    passwordProtected: false,
+    caseStudy: {
+      goal: "Reduce support burden and improve email deliverability for new users who were struggling to get their emails into inboxes instead of spam folders.",
+      solution: "Front-loaded domain authentication in the onboarding flow for seamless DNS setup, rejecting the conventional \"reduce friction\" approach in favor of ensuring production readiness from day one.",
+      outcome: "Dramatically faster time-to-value, significantly higher upgrade rates, and a company wide philosophy that strategic technical complexity accelerates long-term success.",
+      externalUrl: "https://login.twilio.com/u/signup?state=hKFo2SB6b2VYTGY5QzJMdXE4dG9RamRwV3czNGlrQ3lrdG1Qd6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIE9xYkdaZDhjZ2JGSVF5aGU5M2p3R2d4TmhKa2VCTWIto2NpZNkgR244UWMyZ1FOa2trZ0llT2s4QlJqRWZ5eWNoMTU2VUk",
+      externalLinkLabel: "Create an account →"
+    }
   },
   {
     id: 2,
