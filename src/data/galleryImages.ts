@@ -52,7 +52,13 @@ export const galleryImages = [
     title: "Twilio Verify Onboarding",
     subtitle: "Improved usability",
     description: "Simplified verification setup while preserving critical security controls.",
-    passwordProtected: false
+    passwordProtected: false,
+    caseStudy: {
+      goal: "Make it easier for developers to implement phone verification (OTP) without exposing unnecessary channel complexity or compromising security controls.",
+      solution: "Redesigned the production onboarding and configuration experience to hide OTP complexity behind clear abstractions while still exposing the security controls developers need for production use.",
+      outcome: "Faster developer activation, reduced integration friction, and a balance between simplicity and the flexibility required for production-grade authentication.",
+      externalUrl: "https://console.twilio.com/us1/develop/verify/services"
+    }
   },
   {
     id: 6,
