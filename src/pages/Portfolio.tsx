@@ -26,7 +26,7 @@ export default function Portfolio() {
   // Mobile layout (stacked)
   if (isMobile) {
     return <div className="min-h-screen flex flex-col bg-background">
-        <header className="flex justify-between items-center h-[55px] px-5 py-4 bg-background">
+        <header className="flex justify-between items-center h-[55px] px-5 py-4 bg-background sticky top-0 z-50">
           <h1 className="text-base font-bold tracking-[0] leading-[25px]">
             <Link to="/" className="hover:opacity-80 transition-opacity duration-300">
               Sam Puri

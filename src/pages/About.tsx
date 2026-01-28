@@ -1,9 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-
 export default function About() {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
 
       <main className="flex-1 px-4 md:px-8 py-12">
@@ -21,15 +19,10 @@ export default function About() {
                   building systems where design decisions shape how people think, trust, and scale with technology.
                 </p>
 
-                <p>
-                  I grew up in a household of designers—my mom an interior designer, my dad an architect—which taught me
-                  to value structure, craft, and how environments influence behavior. Today, that shows up in my work
-                  designing developer platforms: clear mental models, strong foundations, and experiences that feel
-                  predictable in production.
-                </p>
+                <p>I grew up in a household of designers; my mom being an interior designer, and my dad an architect. It taught me to value structure, craft, and how environments influence behavior. Today, that shows up in my work designing developer platforms: clear mental models, strong foundations, and experiences that feel predictable in production.</p>
 
                 <p>
-                  I'm happiest working on complex products where design is a core part of the system—not a layer added
+                  I'm happiest working on complex products where design is a core part of the system & not a layer added
                   at the end.
                 </p>
 
@@ -88,22 +81,14 @@ export default function About() {
                   <h3 className="text-title-3 font-serif mb-4">Contact</h3>
                   <p className="text-subhead">
                     <span className="font-semibold">Email:</span>{" "}
-                    <a
-                      href="mailto:samarth.ak.puri@gmail.com?subject=Your%20Portfolio%20Caught%20My%20Eye%20%F0%9F%91%8B"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
+                    <a href="mailto:samarth.ak.puri@gmail.com?subject=Your%20Portfolio%20Caught%20My%20Eye%20%F0%9F%91%8B" className="text-muted-foreground hover:text-foreground transition-colors">
                       samarth.ak.puri@gmail.com
                     </a>
                     <br />
                     <span className="font-semibold">Phone:</span> (408) 386-7786
                     <br />
                     <span className="font-semibold">LinkedIn:</span>{" "}
-                    <a
-                      href="https://linkedin.com/in/samarth-puri"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
+                    <a href="https://linkedin.com/in/samarth-puri" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                       linkedin.com/in/samarth-puri
                     </a>
                   </p>
@@ -115,6 +100,5 @@ export default function About() {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 }

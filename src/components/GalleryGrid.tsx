@@ -69,21 +69,21 @@ export const GalleryGrid = ({ onImageClick }: GalleryGridProps) => {
             {/* Text */}
             <div className={`${isEven ? 'md:order-2' : 'md:order-1'} order-2 flex flex-col justify-center`}>
               <h3 className="text-[11px] md:text-xs font-medium mb-0.5 text-muted-foreground">{image.title}</h3>
-              <p className="text-[10px] md:text-[11px] text-muted-foreground/50 mb-1.5">{image.subtitle}</p>
+              <p className="text-[10px] md:text-[11px] text-muted-foreground/60 mb-1">{image.subtitle}</p>
               <p className="text-[10px] md:text-[11px] text-muted-foreground/70 leading-relaxed mb-2">{image.description}</p>
               {image.contactOnly ? (
                 <a
                   href={getContactMailto(image.contactOnly)}
-                  className="text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 underline underline-offset-2 w-fit"
+                  className="text-[10px] md:text-[11px] text-muted-foreground hover:text-foreground transition-colors duration-300 w-fit"
                 >
-                  Contact for information
+                  Contact for information →
                 </a>
               ) : (
                 <button
                   onClick={() => handleThumbnailClick(index)}
-                  className="text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 underline underline-offset-2 w-fit"
+                  className="text-[10px] md:text-[11px] text-muted-foreground hover:text-foreground transition-colors duration-300 w-fit"
                 >
-                  View details
+                  View details →
                 </button>
               )}
             </div>
